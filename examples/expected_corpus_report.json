@@ -1,0 +1,252 @@
+{
+  "schema_version": "0.1.0-draft",
+  "report_id": "example-coding-task-001",
+  "generated_at": "2026-10-14T16:05:00Z",
+  "tool_version": "0.0.0-example",
+  "corpus": {
+    "trace_count": 1,
+    "invoke_agent_count": 1,
+    "harnesses": [
+      "example-coding-agent"
+    ],
+    "tool_inventory": [
+      "edit_file",
+      "get_pr_comments",
+      "read_file",
+      "run_shell"
+    ]
+  },
+  "coverage": {
+    "L0": 1.0,
+    "L1": 1.0,
+    "L2a": 1.0,
+    "L2b": 0.8,
+    "join_key_coverage": 1.0
+  },
+  "denominators": {
+    "claims_extracted": 4,
+    "claims_gate_passing": 4,
+    "claims_join_available": 4,
+    "claims_resolved": 3
+  },
+  "verdict_counts": {
+    "corroborated": 1,
+    "contradicted": 1,
+    "uncorroborated": 1,
+    "insufficient-evidence": 1
+  },
+  "sub_type_rates": [
+    {
+      "sub_type": "1",
+      "evidence_basis": "deterministic",
+      "denominators": {
+        "claims_extracted": 1,
+        "claims_gate_passing": 1,
+        "claims_join_available": 1,
+        "claims_resolved": 1
+      },
+      "verdict_counts": {
+        "corroborated": 1,
+        "contradicted": 0,
+        "uncorroborated": 0,
+        "insufficient-evidence": 0
+      },
+      "p_contradicted": {
+        "conservative": {
+          "point": null,
+          "lower": null,
+          "upper": null,
+          "interval_method": "trace_clustered_bootstrap",
+          "confidence_level": 0.95,
+          "corrected": false,
+          "insufficient_reason": "single synthetic trace; too few traces for a clustered interval"
+        },
+        "permissive": {
+          "point": null,
+          "lower": null,
+          "upper": null,
+          "interval_method": "trace_clustered_bootstrap",
+          "confidence_level": 0.95,
+          "corrected": false,
+          "insufficient_reason": "single synthetic trace; too few traces for a clustered interval"
+        }
+      },
+      "p_uncorroborated": {
+        "conservative": {
+          "point": null,
+          "lower": null,
+          "upper": null,
+          "interval_method": "trace_clustered_bootstrap",
+          "confidence_level": 0.95,
+          "corrected": false,
+          "insufficient_reason": "single synthetic trace; too few traces for a clustered interval"
+        },
+        "permissive": {
+          "point": null,
+          "lower": null,
+          "upper": null,
+          "interval_method": "trace_clustered_bootstrap",
+          "confidence_level": 0.95,
+          "corrected": false,
+          "insufficient_reason": "single synthetic trace; too few traces for a clustered interval"
+        }
+      },
+      "p_hat": {
+        "conservative": {
+          "point": null,
+          "lower": null,
+          "upper": null,
+          "interval_method": "trace_clustered_bootstrap",
+          "confidence_level": 0.95,
+          "corrected": false,
+          "insufficient_reason": "single synthetic trace; too few traces for a clustered interval"
+        },
+        "permissive": {
+          "point": null,
+          "lower": null,
+          "upper": null,
+          "interval_method": "trace_clustered_bootstrap",
+          "confidence_level": 0.95,
+          "corrected": false,
+          "insufficient_reason": "single synthetic trace; too few traces for a clustered interval"
+        }
+      }
+    },
+    {
+      "sub_type": "2a",
+      "evidence_basis": "deterministic",
+      "denominators": {
+        "claims_extracted": 2,
+        "claims_gate_passing": 2,
+        "claims_join_available": 2,
+        "claims_resolved": 1
+      },
+      "verdict_counts": {
+        "corroborated": 0,
+        "contradicted": 1,
+        "uncorroborated": 0,
+        "insufficient-evidence": 1
+      },
+      "p_contradicted": {
+        "conservative": {
+          "point": null,
+          "lower": null,
+          "upper": null,
+          "interval_method": "trace_clustered_bootstrap",
+          "confidence_level": 0.95,
+          "corrected": false,
+          "insufficient_reason": "single synthetic trace; too few traces for a clustered interval"
+        },
+        "permissive": {
+          "point": null,
+          "lower": null,
+          "upper": null,
+          "interval_method": "trace_clustered_bootstrap",
+          "confidence_level": 0.95,
+          "corrected": false,
+          "insufficient_reason": "single synthetic trace; too few traces for a clustered interval"
+        }
+      },
+      "p_uncorroborated": {
+        "conservative": {
+          "point": null,
+          "lower": null,
+          "upper": null,
+          "interval_method": "trace_clustered_bootstrap",
+          "confidence_level": 0.95,
+          "corrected": false,
+          "insufficient_reason": "single synthetic trace; too few traces for a clustered interval"
+        },
+        "permissive": {
+          "point": null,
+          "lower": null,
+          "upper": null,
+          "interval_method": "trace_clustered_bootstrap",
+          "confidence_level": 0.95,
+          "corrected": false,
+          "insufficient_reason": "single synthetic trace; too few traces for a clustered interval"
+        }
+      },
+      "p_hat": {
+        "conservative": {
+          "point": null,
+          "lower": null,
+          "upper": null,
+          "interval_method": "trace_clustered_bootstrap",
+          "confidence_level": 0.95,
+          "corrected": false,
+          "insufficient_reason": "single synthetic trace; too few traces for a clustered interval"
+        },
+        "permissive": {
+          "point": null,
+          "lower": null,
+          "upper": null,
+          "interval_method": "trace_clustered_bootstrap",
+          "confidence_level": 0.95,
+          "corrected": false,
+          "insufficient_reason": "single synthetic trace; too few traces for a clustered interval"
+        }
+      }
+    }
+  ],
+  "relayed": {
+    "status": "exploratory",
+    "denominators": {
+      "claims_extracted": 1,
+      "claims_gate_passing": 1,
+      "claims_join_available": 1,
+      "claims_resolved": 1
+    },
+    "verdict_counts": {
+      "corroborated": 0,
+      "contradicted": 0,
+      "uncorroborated": 1,
+      "insufficient-evidence": 0
+    },
+    "p_relayed": {
+      "point": null,
+      "lower": null,
+      "upper": null,
+      "interval_method": "trace_clustered_bootstrap",
+      "confidence_level": 0.95,
+      "corrected": false,
+      "insufficient_reason": "single synthetic trace; too few traces for a clustered interval"
+    },
+    "source_kind_counts": {
+      "bot_message": 1
+    }
+  },
+  "reason_code_distribution": {
+    "tool_result_not_logged": 1
+  },
+  "calibration": {
+    "constants_version": null,
+    "per_sub_type": {}
+  },
+  "examples": [
+    {
+      "claim_id": "claim-001",
+      "trace_id": "5b8efff798038103d269b633813fc60c",
+      "verdict": "corroborated",
+      "sub_type": "1"
+    },
+    {
+      "claim_id": "claim-002",
+      "trace_id": "5b8efff798038103d269b633813fc60c",
+      "verdict": "contradicted",
+      "sub_type": "2a"
+    },
+    {
+      "claim_id": "claim-003",
+      "trace_id": "5b8efff798038103d269b633813fc60c",
+      "verdict": "insufficient-evidence",
+      "sub_type": "2a"
+    },
+    {
+      "claim_id": "claim-004",
+      "trace_id": "5b8efff798038103d269b633813fc60c",
+      "verdict": "uncorroborated",
+      "sub_type": "relayed"
+    }
+  ]
+}

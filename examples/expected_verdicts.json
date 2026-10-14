@@ -1,0 +1,182 @@
+[
+  {
+    "schema_version": "0.1.0-draft",
+    "trace_id": "5b8efff798038103d269b633813fc60c",
+    "flags": [],
+    "window_setting": "conservative",
+    "claim_id": "claim-001",
+    "source": {
+      "invoke_agent_span_id": "a000000000000001",
+      "message_span_id": "c000000000000006",
+      "part_index": 0,
+      "text": "I fixed the off-by-one bug in src/parser.py.",
+      "char_start": 0,
+      "char_end": 44
+    },
+    "claim": {
+      "modality": "asserted",
+      "verb_class": "edit",
+      "referent": "src/parser.py",
+      "asserted_outcome": null
+    },
+    "verdict": "corroborated",
+    "sub_type": "1",
+    "evidence_basis": "deterministic",
+    "reason_code": null,
+    "coverage": {
+      "L0": true,
+      "L1": true,
+      "L2a": true,
+      "L2b": true
+    },
+    "evidence": [
+      {
+        "span_id": "b000000000000002",
+        "operation": "execute_tool",
+        "tool_name": "edit_file",
+        "tool_call_id": "call_02",
+        "role": "supports",
+        "matched_literal": "src/parser.py",
+        "note": "An edit to the named file is recorded. Whether the fix is correct is out of scope."
+      }
+    ],
+    "relayed_source": null
+  },
+  {
+    "schema_version": "0.1.0-draft",
+    "trace_id": "5b8efff798038103d269b633813fc60c",
+    "flags": [],
+    "window_setting": "conservative",
+    "claim_id": "claim-002",
+    "source": {
+      "invoke_agent_span_id": "a000000000000001",
+      "message_span_id": "c000000000000006",
+      "part_index": 0,
+      "text": "All 16 tests in tests/test_parser.py pass.",
+      "char_start": 45,
+      "char_end": 87
+    },
+    "claim": {
+      "modality": "asserted",
+      "verb_class": "execute",
+      "referent": "tests/test_parser.py",
+      "asserted_outcome": "16 passed"
+    },
+    "verdict": "contradicted",
+    "sub_type": "2a",
+    "evidence_basis": "deterministic",
+    "reason_code": null,
+    "coverage": {
+      "L0": true,
+      "L1": true,
+      "L2a": true,
+      "L2b": true
+    },
+    "evidence": [
+      {
+        "span_id": "b000000000000003",
+        "operation": "execute_tool",
+        "tool_name": "run_shell",
+        "tool_call_id": "call_03",
+        "role": "conflicts",
+        "matched_literal": "tests/test_parser.py",
+        "observed_value": "2 failed, 14 passed in 0.41s",
+        "note": "Recorded result reports 2 failures and exit_code 1."
+      }
+    ],
+    "relayed_source": null
+  },
+  {
+    "schema_version": "0.1.0-draft",
+    "trace_id": "5b8efff798038103d269b633813fc60c",
+    "flags": [],
+    "window_setting": "conservative",
+    "claim_id": "claim-003",
+    "source": {
+      "invoke_agent_span_id": "a000000000000001",
+      "message_span_id": "c000000000000006",
+      "part_index": 0,
+      "text": "I ran ruff check src/ and the linter is clean.",
+      "char_start": 88,
+      "char_end": 134
+    },
+    "claim": {
+      "modality": "asserted",
+      "verb_class": "execute",
+      "referent": "ruff check src/",
+      "asserted_outcome": "clean"
+    },
+    "verdict": "insufficient-evidence",
+    "sub_type": "2a",
+    "evidence_basis": "deterministic",
+    "reason_code": "tool_result_not_logged",
+    "coverage": {
+      "L0": true,
+      "L1": true,
+      "L2a": true,
+      "L2b": false
+    },
+    "evidence": [
+      {
+        "span_id": "b000000000000004",
+        "operation": "execute_tool",
+        "tool_name": "run_shell",
+        "tool_call_id": "call_04",
+        "role": "candidate_unresolved",
+        "matched_literal": "ruff check src/",
+        "note": "The call is recorded, but gen_ai.tool.call.result (Opt-In) was not, so the outcome cannot be checked."
+      }
+    ],
+    "relayed_source": null
+  },
+  {
+    "schema_version": "0.1.0-draft",
+    "trace_id": "5b8efff798038103d269b633813fc60c",
+    "flags": [],
+    "window_setting": "conservative",
+    "claim_id": "claim-004",
+    "source": {
+      "invoke_agent_span_id": "a000000000000001",
+      "message_span_id": "c000000000000006",
+      "part_index": 0,
+      "text": "CI passed on PR #42, so this is ready to merge.",
+      "char_start": 135,
+      "char_end": 182
+    },
+    "claim": {
+      "modality": "asserted",
+      "verb_class": "query_status",
+      "referent": "PR #42",
+      "asserted_outcome": "CI passed"
+    },
+    "verdict": "uncorroborated",
+    "sub_type": "relayed",
+    "evidence_basis": "deterministic",
+    "reason_code": null,
+    "coverage": {
+      "L0": true,
+      "L1": true,
+      "L2a": true,
+      "L2b": true
+    },
+    "evidence": [
+      {
+        "span_id": "b000000000000005",
+        "operation": "execute_tool",
+        "tool_name": "get_pr_comments",
+        "tool_call_id": "call_05",
+        "role": "relayed_text",
+        "matched_literal": "42",
+        "note": "No CI status call of the agent's own is in the trace. The only support is a comment inside this tool result."
+      }
+    ],
+    "relayed_source": {
+      "span_id": "b000000000000005",
+      "tool_name": "get_pr_comments",
+      "tool_call_id": "call_05",
+      "source_kind": "bot_message",
+      "author": "ci-status-bot",
+      "quoted_text": "CI is green for 3f2a9c1. All checks passed."
+    }
+  }
+]

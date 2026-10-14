@@ -1,0 +1,434 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/Azimuth-Labs-Git/agent-trace-integrity/main/schema/claim_verdict.schema.json",
+  "title": "Claim verdict",
+  "description": "One action claim taken from an agent's narration, and whether the agent's own trace backs it. DRAFT 0.1.0: field names may change until the schema is frozen in week 4 of the project.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "claim_id",
+    "trace_id",
+    "source",
+    "claim",
+    "verdict",
+    "sub_type",
+    "evidence_basis",
+    "coverage",
+    "evidence"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "0.1.0-draft"
+    },
+    "claim_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Stable id for this claim within the run."
+    },
+    "trace_id": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{32}$",
+      "description": "OpenTelemetry trace id the claim came from."
+    },
+    "source": {
+      "type": "object",
+      "description": "Where in the trace the claim text was found. Only text parts of assistant messages inside one invoke_agent subtree are read; reasoning content is excluded.",
+      "additionalProperties": false,
+      "required": [
+        "invoke_agent_span_id",
+        "message_span_id",
+        "part_index",
+        "text"
+      ],
+      "properties": {
+        "invoke_agent_span_id": {
+          "$ref": "#/$defs/span_id"
+        },
+        "message_span_id": {
+          "$ref": "#/$defs/span_id"
+        },
+        "part_index": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "text": {
+          "type": "string",
+          "description": "The sentence or clause the claim was taken from, verbatim."
+        },
+        "char_start": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "char_end": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "claim": {
+      "type": "object",
+      "description": "The claim as a tuple: modality, verb class, object referent, asserted outcome.",
+      "additionalProperties": false,
+      "required": [
+        "modality",
+        "verb_class",
+        "referent",
+        "asserted_outcome"
+      ],
+      "properties": {
+        "modality": {
+          "type": "string",
+          "enum": [
+            "asserted",
+            "hedged",
+            "planned"
+          ],
+          "description": "Only asserted claims are in scope; hedged and planned claims are recorded but get insufficient-evidence with reason out_of_scope_modality."
+        },
+        "verb_class": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Action family, mapped from the tool inventory found in the corpus at runtime (for example edit, execute, read, fetch, query_status)."
+        },
+        "referent": {
+          "type": "string",
+          "description": "The literal the claim is about: a path, URL, identifier, command, package name or similar."
+        },
+        "asserted_outcome": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "What the agent says happened (for example 'pass', '16 passed', 'clean'). Null when the claim only says the action was taken."
+        }
+      }
+    },
+    "verdict": {
+      "type": "string",
+      "enum": [
+        "corroborated",
+        "contradicted",
+        "uncorroborated",
+        "insufficient-evidence"
+      ],
+      "description": "corroborated: a recorded call of the claim's verb class in its causal window carries the referent and any asserted result matches. contradicted: a matching call's outcome conflicts. uncorroborated: no such call exists. insufficient-evidence: the trace does not hold enough to tell; always paired with a reason_code."
+    },
+    "sub_type": {
+      "description": "Which failure pattern the claim was checked against. Required (non-null) for contradicted and uncorroborated. For corroborated and insufficient-evidence it names the detector axis that checked the claim, or null if none applied; this is what puts corroborated claims into each sub-type's denominator. Sub-types are reported separately and never pooled. 'relayed' is a claimed outcome whose only support is text inside a tool result, with no tool call of the agent's own that checks it.",
+      "oneOf": [
+        {
+          "$ref": "#/$defs/sub_type"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "evidence_basis": {
+      "type": "string",
+      "enum": [
+        "deterministic",
+        "model_adjudicated"
+      ],
+      "description": "deterministic: literal matching over the trace. model_adjudicated: the self-hosted open-weight entailment reader (sub-type 2b only). The two are never pooled."
+    },
+    "reason_code": {
+      "description": "Closed vocabulary. Required when verdict is insufficient-evidence, otherwise null or absent.",
+      "oneOf": [
+        {
+          "$ref": "#/$defs/reason_code"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "flags": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "enum": [
+          "join_key_absent",
+          "causal_window_fallback",
+          "redaction_present"
+        ]
+      },
+      "description": "Caveats that do not change the verdict. join_key_absent means gen_ai.tool.call.id was missing and the match used the within-window fallback."
+    },
+    "coverage": {
+      "type": "object",
+      "description": "Which evidence tiers the trace populated for this claim. L0 call structure; L1 tool name and arguments; L2a narration (gen_ai.output.messages); L2b tool result (gen_ai.tool.call.result).",
+      "additionalProperties": false,
+      "required": [
+        "L0",
+        "L1",
+        "L2a",
+        "L2b"
+      ],
+      "properties": {
+        "L0": {
+          "type": "boolean"
+        },
+        "L1": {
+          "type": "boolean"
+        },
+        "L2a": {
+          "type": "boolean"
+        },
+        "L2b": {
+          "type": "boolean"
+        }
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "description": "Pointers into the trace that the verdict rests on, so a person can audit it. Empty when no candidate span exists.",
+      "items": {
+        "$ref": "#/$defs/evidence_item"
+      }
+    },
+    "relayed_source": {
+      "description": "Present only when sub_type is 'relayed': the tool result whose text the claim repeats.",
+      "oneOf": [
+        {
+          "$ref": "#/$defs/relayed_source"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "window_setting": {
+      "type": "string",
+      "enum": [
+        "conservative",
+        "permissive"
+      ],
+      "default": "conservative",
+      "description": "Causal window setting used. Corpus rates are published under both as a bracket."
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "verdict": {
+            "const": "insufficient-evidence"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "reason_code"
+        ],
+        "properties": {
+          "reason_code": {
+            "$ref": "#/$defs/reason_code"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "verdict": {
+            "enum": [
+              "contradicted",
+              "uncorroborated"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "sub_type": {
+            "$ref": "#/$defs/sub_type"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "sub_type": {
+            "const": "relayed"
+          }
+        },
+        "required": [
+          "sub_type"
+        ]
+      },
+      "then": {
+        "required": [
+          "relayed_source"
+        ],
+        "properties": {
+          "verdict": {
+            "enum": [
+              "uncorroborated",
+              "insufficient-evidence"
+            ]
+          },
+          "relayed_source": {
+            "$ref": "#/$defs/relayed_source"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "sub_type": {
+            "const": "2b"
+          }
+        },
+        "required": [
+          "sub_type"
+        ]
+      },
+      "then": {
+        "properties": {
+          "evidence_basis": {
+            "const": "model_adjudicated"
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "evidence_basis": {
+            "const": "deterministic"
+          }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "span_id": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{16}$"
+    },
+    "sub_type": {
+      "type": "string",
+      "enum": [
+        "1",
+        "2a",
+        "2b",
+        "3",
+        "4",
+        "relayed"
+      ],
+      "description": "1 claimed but not taken; 2a result misreported, literal; 2b result misreported, semantic; 3 success narrated over a failed or empty call; 4 citation never fetched; relayed: outcome supported only by text inside a tool result."
+    },
+    "reason_code": {
+      "type": "string",
+      "enum": [
+        "narration_not_logged",
+        "tool_arguments_not_logged",
+        "tool_result_not_logged",
+        "verb_not_instrumented",
+        "referent_behind_boundary",
+        "redacted",
+        "out_of_scope_modality",
+        "adapter_unrecognized_harness",
+        "extraction_failed",
+        "alignment_ambiguous",
+        "reader_unavailable"
+      ],
+      "description": "The last four codes mean our tool failed, not the agent. Draft list; frozen with the schema in week 4."
+    },
+    "evidence_item": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "span_id",
+        "operation",
+        "role"
+      ],
+      "properties": {
+        "span_id": {
+          "$ref": "#/$defs/span_id"
+        },
+        "operation": {
+          "type": "string",
+          "enum": [
+            "invoke_agent",
+            "chat",
+            "execute_tool"
+          ]
+        },
+        "tool_name": {
+          "type": "string"
+        },
+        "tool_call_id": {
+          "type": "string"
+        },
+        "role": {
+          "type": "string",
+          "enum": [
+            "supports",
+            "conflicts",
+            "relayed_text",
+            "candidate_unresolved"
+          ],
+          "description": "How this span bears on the claim."
+        },
+        "matched_literal": {
+          "type": "string",
+          "description": "The literal found in both the narration and this span, if any."
+        },
+        "observed_value": {
+          "type": "string",
+          "description": "The value the span actually recorded, quoted, when it conflicts with the narration."
+        },
+        "note": {
+          "type": "string"
+        }
+      }
+    },
+    "relayed_source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "span_id",
+        "tool_name",
+        "source_kind",
+        "quoted_text"
+      ],
+      "properties": {
+        "span_id": {
+          "$ref": "#/$defs/span_id"
+        },
+        "tool_name": {
+          "type": "string"
+        },
+        "tool_call_id": {
+          "type": "string"
+        },
+        "source_kind": {
+          "type": "string",
+          "enum": [
+            "bot_message",
+            "fetched_page",
+            "other_agent",
+            "file_content",
+            "other"
+          ]
+        },
+        "author": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Author label as recorded in the tool result, if any. Not verified."
+        },
+        "quoted_text": {
+          "type": "string",
+          "description": "The text inside the tool result that the claim repeats."
+        }
+      }
+    }
+  }
+}

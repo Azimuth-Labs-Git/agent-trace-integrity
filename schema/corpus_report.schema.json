@@ -1,0 +1,232 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/Azimuth-Labs-Git/agent-trace-integrity/main/schema/corpus_report.schema.json",
+  "title": "Corpus report",
+  "description": "Aggregate of claim verdicts over a corpus of traces. Rates are per sub-type and never pooled; every rate ships with its four denominators, an interval, and a causal-window bracket. DRAFT 0.1.0: field names may change until the schema is frozen in week 4 of the project.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "report_id",
+    "generated_at",
+    "tool_version",
+    "corpus",
+    "coverage",
+    "denominators",
+    "verdict_counts",
+    "sub_type_rates",
+    "relayed",
+    "reason_code_distribution",
+    "examples"
+  ],
+  "properties": {
+    "schema_version": { "type": "string", "const": "0.1.0-draft" },
+    "report_id": { "type": "string", "minLength": 1 },
+    "generated_at": { "type": "string", "format": "date-time" },
+    "tool_version": { "type": "string" },
+    "corpus": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["trace_count", "invoke_agent_count"],
+      "properties": {
+        "trace_count": { "type": "integer", "minimum": 0 },
+        "invoke_agent_count": { "type": "integer", "minimum": 0 },
+        "harnesses": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Harness or service names seen in resource attributes."
+        },
+        "tool_inventory": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Tool names enumerated from the corpus at runtime."
+        }
+      }
+    },
+    "coverage": {
+      "type": "object",
+      "description": "Share of execute_tool spans (L0, L1, L2b) or chat spans (L2a) that populate each tier. Without L2a the report states zero coverage and abstains.",
+      "additionalProperties": false,
+      "required": ["L0", "L1", "L2a", "L2b", "join_key_coverage"],
+      "properties": {
+        "L0": { "$ref": "#/$defs/proportion" },
+        "L1": { "$ref": "#/$defs/proportion" },
+        "L2a": { "$ref": "#/$defs/proportion" },
+        "L2b": { "$ref": "#/$defs/proportion" },
+        "join_key_coverage": {
+          "$ref": "#/$defs/proportion",
+          "description": "Share of tool calls carrying gen_ai.tool.call.id."
+        }
+      }
+    },
+    "denominators": { "$ref": "#/$defs/denominators" },
+    "verdict_counts": { "$ref": "#/$defs/verdict_counts" },
+    "sub_type_rates": {
+      "type": "array",
+      "description": "One entry per sub-type and evidence basis. The relayed sub-type is not listed here; it has its own section.",
+      "items": { "$ref": "#/$defs/sub_type_rate" }
+    },
+    "relayed": {
+      "type": "object",
+      "description": "Relayed claims, reported on their own and never pooled with the other sub-types. Needs gen_ai.tool.call.result, which is Opt-In, so insufficient-evidence is a common and honest answer here. Exploratory: outside holdout acceptance.",
+      "additionalProperties": false,
+      "required": ["status", "denominators", "verdict_counts", "p_relayed"],
+      "properties": {
+        "status": { "type": "string", "enum": ["exploratory", "killed"] },
+        "denominators": { "$ref": "#/$defs/denominators" },
+        "verdict_counts": { "$ref": "#/$defs/verdict_counts" },
+        "p_relayed": { "$ref": "#/$defs/estimate" },
+        "source_kind_counts": {
+          "type": "object",
+          "additionalProperties": { "type": "integer", "minimum": 0 }
+        }
+      }
+    },
+    "reason_code_distribution": {
+      "type": "object",
+      "description": "Count of insufficient-evidence verdicts by reason code.",
+      "propertyNames": {
+        "enum": [
+          "narration_not_logged",
+          "tool_arguments_not_logged",
+          "tool_result_not_logged",
+          "verb_not_instrumented",
+          "referent_behind_boundary",
+          "redacted",
+          "out_of_scope_modality",
+          "adapter_unrecognized_harness",
+          "extraction_failed",
+          "alignment_ambiguous",
+          "reader_unavailable"
+        ]
+      },
+      "additionalProperties": { "type": "integer", "minimum": 0 }
+    },
+    "calibration": {
+      "type": "object",
+      "description": "Frozen per-sub-type TPR and FPR constants used for misclassification correction. Published constants, never computed from labels at runtime.",
+      "additionalProperties": false,
+      "required": ["constants_version", "per_sub_type"],
+      "properties": {
+        "constants_version": { "type": ["string", "null"] },
+        "per_sub_type": {
+          "type": "object",
+          "propertyNames": { "$ref": "#/$defs/sub_type" },
+          "additionalProperties": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["tpr", "fpr"],
+            "properties": {
+              "tpr": { "type": ["number", "null"], "minimum": 0, "maximum": 1 },
+              "fpr": { "type": ["number", "null"], "minimum": 0, "maximum": 1 }
+            }
+          }
+        }
+      }
+    },
+    "examples": {
+      "type": "array",
+      "description": "Auditable pointers to example claims. Drawn at a precision-first operating point, so not representative of rates.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["claim_id", "trace_id", "verdict"],
+        "properties": {
+          "claim_id": { "type": "string" },
+          "trace_id": { "type": "string", "pattern": "^[0-9a-f]{32}$" },
+          "verdict": { "$ref": "#/$defs/verdict" },
+          "sub_type": {
+            "oneOf": [
+              { "$ref": "#/$defs/sub_type" },
+              { "type": "string", "const": "relayed" },
+              { "type": "null" }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "verdict": {
+      "type": "string",
+      "enum": ["corroborated", "contradicted", "uncorroborated", "insufficient-evidence"]
+    },
+    "sub_type": {
+      "type": "string",
+      "enum": ["1", "2a", "2b", "3", "4"]
+    },
+    "proportion": { "type": "number", "minimum": 0, "maximum": 1 },
+    "denominators": {
+      "type": "object",
+      "description": "The four denominators that ship with every rate.",
+      "additionalProperties": false,
+      "required": ["claims_extracted", "claims_gate_passing", "claims_join_available", "claims_resolved"],
+      "properties": {
+        "claims_extracted": { "type": "integer", "minimum": 0 },
+        "claims_gate_passing": { "type": "integer", "minimum": 0 },
+        "claims_join_available": { "type": "integer", "minimum": 0 },
+        "claims_resolved": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Claims that got a verdict other than insufficient-evidence."
+        }
+      }
+    },
+    "verdict_counts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["corroborated", "contradicted", "uncorroborated", "insufficient-evidence"],
+      "properties": {
+        "corroborated": { "type": "integer", "minimum": 0 },
+        "contradicted": { "type": "integer", "minimum": 0 },
+        "uncorroborated": { "type": "integer", "minimum": 0 },
+        "insufficient-evidence": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "estimate": {
+      "type": "object",
+      "description": "A rate with its uncertainty. point, lower and upper are null when the sample cannot support a rate; then insufficient_reason says why.",
+      "additionalProperties": false,
+      "required": ["point", "lower", "upper", "interval_method", "confidence_level", "corrected"],
+      "properties": {
+        "point": { "type": ["number", "null"], "minimum": 0, "maximum": 1 },
+        "lower": { "type": ["number", "null"], "minimum": 0, "maximum": 1 },
+        "upper": { "type": ["number", "null"], "minimum": 0, "maximum": 1 },
+        "interval_method": { "type": "string", "enum": ["trace_clustered_bootstrap"] },
+        "confidence_level": { "type": "number", "exclusiveMinimum": 0, "exclusiveMaximum": 1 },
+        "corrected": {
+          "type": "boolean",
+          "description": "True when corrected for misclassification with the frozen TPR and FPR constants."
+        },
+        "insufficient_reason": { "type": ["string", "null"] }
+      }
+    },
+    "bracketed_estimate": {
+      "type": "object",
+      "description": "The same rate under the conservative and permissive causal-window settings, published as a pair.",
+      "additionalProperties": false,
+      "required": ["conservative", "permissive"],
+      "properties": {
+        "conservative": { "$ref": "#/$defs/estimate" },
+        "permissive": { "$ref": "#/$defs/estimate" }
+      }
+    },
+    "sub_type_rate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["sub_type", "evidence_basis", "denominators", "verdict_counts", "p_contradicted", "p_uncorroborated", "p_hat"],
+      "properties": {
+        "sub_type": { "$ref": "#/$defs/sub_type" },
+        "evidence_basis": { "type": "string", "enum": ["deterministic", "model_adjudicated"] },
+        "denominators": { "$ref": "#/$defs/denominators" },
+        "verdict_counts": { "$ref": "#/$defs/verdict_counts" },
+        "p_contradicted": { "$ref": "#/$defs/bracketed_estimate" },
+        "p_uncorroborated": { "$ref": "#/$defs/bracketed_estimate" },
+        "p_hat": {
+          "$ref": "#/$defs/bracketed_estimate",
+          "description": "p_contradicted plus p_uncorroborated, as prevalence among gate-passing claims of this sub-type. Not a per-interaction rate."
+        }
+      }
+    }
+  }
+}
