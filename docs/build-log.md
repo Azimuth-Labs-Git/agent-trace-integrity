@@ -223,3 +223,24 @@
   - match each claim to the check it is about;
   - fix span selection;
   - add a blind second rater.
+
+## 2026-10-15, LLM judge on Modal
+
+- The PI asked for the judge to run on Modal instead of Lambda, using the methods of the
+  biosafety-circuit-tracing repo (transformers on a slim image, lazy imports, a dry-run entry
+  point), with the run tagged `azimuth`. He approved it.
+- `scripts/modal_judge.py`:
+  - app `azimuth-ati-judge`, tags `project=azimuth`, its own model-cache volume;
+  - one A10G, Qwen/Qwen3.5-4B, transformers 5.18.0;
+  - greedy decoding (temperature 0), seed 0;
+  - the same prompt and answer parser as `scripts/lambda/run_judge.py`.
+- Input: 44 sentences in `local/` (the PI's 20 hand-checked claims plus 24 borderline D1 claims).
+- Four failed attempts came before the run that worked, all stopped quickly:
+  - helper import path;
+  - vLLM 0.11.0 does not support the Qwen3.5 architecture;
+  - vLLM 0.30.0 needs nvcc, which the slim image lacks;
+  - transformers 5 returns a dict from `apply_chat_template`.
+  The app shows no running containers after the run.
+- Result (`results/judge-d1.json`): the judge matched the PI's question 1 on 14 of 19 settled
+  cards (Wilson 95% 0.51 to 0.88), and called 18 of 24 borderline sentences claims. The second,
+  larger judge was not run.

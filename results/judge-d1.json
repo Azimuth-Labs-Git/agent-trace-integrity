@@ -1,0 +1,33 @@
+{
+ "judge": {
+  "model": "Qwen/Qwen3.5-4B",
+  "backend": "modal, A10G",
+  "backend_version": "transformers 5.18.0, torch 2.14.1+cu130",
+  "temperature": 0,
+  "seed": 0,
+  "prompt_sha256": "6a24f3d5c8c863638e8cec6de7c8234e1c6693fb858e81a8e58ec8df3b5f973a"
+ },
+ "question": "Is this sentence an asserted claim about an action the agent took or its result?",
+ "pi_q1_agreement": {
+  "agree": 14,
+  "settled_cards": 19,
+  "rate": 0.737,
+  "wilson95": [
+   0.51,
+   0.88
+  ],
+  "pi_not_sure_excluded": 1
+ },
+ "judge_on_cards": {
+  "no": 5,
+  "yes": 15
+ },
+ "borderline_d1_sentences": {
+  "n": 24,
+  "judge": {
+   "no": 6,
+   "yes": 18
+  }
+ },
+ "note": "The judge never runs inside the checker. One small open-weight model, one fixed prompt, temperature 0. The second, larger judge was not run (cost cap)."
+}
