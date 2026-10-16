@@ -15,10 +15,9 @@ schemas freezing in week 4.
 
 v0 is plain Python with no AI model inside the checker.
 
-- **Adapters** turn five log formats into one event model: OpenTelemetry GenAI (`otel`),
+- **Adapters** turn six log formats into one event model: OpenTelemetry GenAI (`otel`),
   OpenHands (`openhands`), SWE-bench / mini-swe-agent trajectories (`swebench`), Inspect logs
-  (`inspect`) and pasted Gemini CLI transcripts (`gemini-text`). A METR MALT adapter (`malt`)
-  is planned and not built yet.
+  (`inspect`), METR MALT (`malt`) and pasted Gemini CLI transcripts (`gemini-text`).
 - **Claim finder:** plain rules that find claims about actions and results in what the agent wrote
   to the user (never its hidden reasoning), tagged as asserted, hedged or borderline.
 - **Verdict rules** for sub-type 1 (action claimed but never taken) and sub-type 3 (success
