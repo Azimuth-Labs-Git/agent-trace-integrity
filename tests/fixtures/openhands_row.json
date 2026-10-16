@@ -1,0 +1,53 @@
+{
+ "_comment": "Synthetic fixture written by hand for agent-trace-integrity tests; shaped like nebius/SWE-rebench-openhands-trajectories rows, contains no data from that dataset.",
+ "trajectory_id": "synthetic-run-3",
+ "trajectory": [
+  {
+   "role": "user",
+   "content": "Say hi.",
+   "tool_calls": null,
+   "tool_call_id": null,
+   "name": null
+  },
+  {
+   "role": "assistant",
+   "content": "Checking.",
+   "tool_calls": [
+    {
+     "type": "function",
+     "function": {
+      "name": "execute_bash",
+      "arguments": "{\"command\": \"echo hi\"}"
+     }
+    }
+   ],
+   "tool_call_id": null,
+   "name": null
+  },
+  {
+   "role": "tool",
+   "content": "hi\n[The command completed with exit code 0.]\n[Current working directory: /workspace/demo]\n[Python interpreter: /usr/bin/python]\n[Command finished with exit code 0]",
+   "name": "execute_bash"
+  },
+  {
+   "role": "assistant",
+   "content": "hi",
+   "tool_calls": [
+    {
+     "type": "function",
+     "function": {
+      "name": "execute_bash",
+      "arguments": "not json"
+     }
+    }
+   ],
+   "tool_call_id": null,
+   "name": null
+  },
+  {
+   "role": "tool",
+   "content": "\n[The command completed with exit code 2.]\n[Current working directory: /workspace/demo]\n[Python interpreter: /usr/bin/python]\n[Command finished with exit code 2]",
+   "name": "execute_bash"
+  }
+ ]
+}

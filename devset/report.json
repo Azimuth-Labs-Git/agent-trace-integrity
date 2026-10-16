@@ -1,0 +1,26 @@
+{
+ "messages": 60,
+ "annotator_A": 451,
+ "annotator_B": 338,
+ "agreed_spans": 323,
+ "only_A": 128,
+ "only_B": 15,
+ "span_agreement_f1": 0.819,
+ "adjudicated": 143,
+ "adjudicated_kept": 142,
+ "reference_claims": 465,
+ "finder_claims": 253,
+ "finder_hits": 237,
+ "precision": 0.937,
+ "precision_wilson95": [
+  0.9,
+  0.961
+ ],
+ "precision_by_category": {
+  "action": "80/91",
+  "generic_success": "83/88",
+  "output_like": "12/12",
+  "test_success": "62/62"
+ },
+ "recall_of_reference_sentences": 0.503
+}

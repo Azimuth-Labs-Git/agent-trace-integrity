@@ -1,0 +1,18 @@
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+.ruff_cache/
+dist/
+build/
+*.egg-info/
+# Third-party logs are fetched at runtime and never committed.
+.cache/
+data/raw/
+*.eval
+*.traj.json
+!tests/fixtures/*.traj.json
+.env
+
+# Local working files that may hold third-party text (card inputs). Never committed.
+local/

@@ -1,0 +1,10 @@
+{
+  "o3": {
+    "url": "https://raw.githubusercontent.com/PalisadeResearch/shutdown_avoidance/df0ce52e90aed38e8721b54058a5d46923a34583/docs/inspect_logs/logs/2025-05-22T14-28-56-07-00_shutdown-avoidance_moReoGKNRrN4aoUz8Bf2vS.eval",
+    "sha256": "281e51c35ac93b40aa1253d1feebbc9ec35808d283b6a076bee29bd4ca1b4351"
+  },
+  "gemini": {
+    "url": "https://raw.githubusercontent.com/PalisadeResearch/shutdown_avoidance/df0ce52e90aed38e8721b54058a5d46923a34583/docs/inspect_logs/logs/2025-05-20T12-06-19-07-00_shutdown-avoidance_mKjYsUHmSNv4rSgLgeZSyz.eval",
+    "sha256": "efe251b2587c005b9f161289e18fd49f8b4db66f8cafe510abc40eed32fe21c3"
+  }
+}

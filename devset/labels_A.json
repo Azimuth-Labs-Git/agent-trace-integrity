@@ -1,0 +1,2369 @@
+{
+ "d2-10000": [],
+ "d2-10001": [
+  {
+   "quote": "I have successfully implemented",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Modified `/workspace/spectacles-ci__spectacles__0.2/spectacles/cli.py`",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Added `LookerApiError` to the imports",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Added specific exception handler for `LookerApiError`",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Enhanced `/workspace/spectacles-ci__spectacles__0.2/tests/test_cli.py`",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Added `LookerApiError` import",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Added comprehensive test `test_handle_exceptions_looker_api_error_logs_response`",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "All existing tests pass (159/159)",
+   "category": "test_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "New functionality verified with custom test scripts",
+   "category": "test_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Edge cases tested",
+   "category": "test_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "No breaking changes to existing functionality",
+   "category": "generic_success",
+   "modality": "asserted"
+  }
+ ],
+ "d2-10002": [
+  {
+   "quote": "I have successfully implemented the fix",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Changed `dtype='float32'` to `dtype='float64'` in `gbox_boundary` function",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Changed `dtype='float32'` to `dtype='float64'` in `roi_boundary` function",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Updated docstring to reflect the new float64 return type",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Created and ran comprehensive reproduction scripts",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "verified the fix",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "The exact coordinates from the issue description now match perfectly",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "All existing geometry tests pass",
+   "category": "test_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "68 passed, 1 xfailed",
+   "category": "output_like",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Storage-related tests that use these functions also pass",
+   "category": "test_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Both normal and very small resolution values work correctly",
+   "category": "generic_success",
+   "modality": "asserted"
+  }
+ ],
+ "d2-10003": [],
+ "d2-10004": [
+  {
+   "quote": "I have successfully implemented",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Modified File:** `/workspace/LettError__ufoProcessor__1.0/Lib/ufoProcessor/__init__.py`",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Enhanced the `swapGlyphNames` function",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Anchor copying during first transfer",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Anchor copying during second transfer",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Anchor copying during third transfer",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Created and ran comprehensive tests",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Anchors are properly preserved after the fix",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "All existing functionality remains intact",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Edge cases work correctly",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Integration with designspace rule processing works properly",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Original reproduction test: PASS",
+   "category": "output_like",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Edge case tests: PASS (3/3)",
+   "category": "output_like",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Unit tests: PASS (3/3)",
+   "category": "output_like",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Existing test suite: PASS",
+   "category": "output_like",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Integration context test: PASS",
+   "category": "output_like",
+   "modality": "asserted"
+  }
+ ],
+ "d2-10005": [
+  {
+   "quote": "I have successfully fixed the LIKE operator issue",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "I made minimal changes to `/workspace/betodealmeida__shillelagh__1.2/src/shillelagh/fields.py`",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Added import for the `Like` filter class",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Modified the `String` class constructor",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Added `__init__` method to String class",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "All 328 existing tests pass with 100% coverage",
+   "category": "test_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "String fields now have LIKE support by default",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "now work correctly",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "No breaking changes or regressions introduced",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Backward compatibility maintained",
+   "category": "generic_success",
+   "modality": "asserted"
+  }
+ ],
+ "d2-10006": [
+  {
+   "quote": "I have successfully implemented",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "File Modified:** `/workspace/elastic__apm-agent-python__6.11/elasticapm/contrib/serverless/aws.py`",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Added `re` import",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Implemented `_extract_region_from_domain()` helper function",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Enhanced API Gateway/Lambda URL metadata handling",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "All existing tests pass without modification",
+   "category": "test_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "All 12 existing serverless tests pass",
+   "category": "test_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "No regressions in related lambda/functionality tests",
+   "category": "test_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Edge cases handled properly",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Metadata consistency verified across all trigger types",
+   "category": "generic_success",
+   "modality": "asserted"
+  }
+ ],
+ "d2-10007": [
+  {
+   "quote": "I have successfully implemented",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Added `((3, 9), ()),` to the `future` tuple",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "All existing tests continue to pass",
+   "category": "test_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "`--py39-plus` flag now works without throwing KeyError",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Import removals work correctly for Python 3.9",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "All Tests Pass",
+   "category": "test_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Import removals tests: 28/28 passed",
+   "category": "output_like",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Main functionality tests: 23/23 passed",
+   "category": "output_like",
+   "modality": "asserted"
+  },
+  {
+   "quote": "All import-related tests: 171/171 passed",
+   "category": "output_like",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Python 3.9 specific tests: 10/10 passed",
+   "category": "output_like",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Successfully processes Python files with `--py39-plus`",
+   "category": "generic_success",
+   "modality": "asserted"
+  }
+ ],
+ "d2-10008": [
+  {
+   "quote": "I have successfully implemented",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "File Modified:** `/workspace/cekit__cekit__3.0/cekit/generator/base.py`",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Eliminated all `subprocess.check_output()` calls",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Created `ODCSAPIClient` class that makes direct HTTP API calls",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Added imports**: `requests`, `json`, `time`",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Removed import**: `subprocess`",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Modified `_prepare_content_sets()` method",
+   "category": "action",
+   "modality": "asserted"
+  }
+ ],
+ "d2-10009": [
+  {
+   "quote": "I have successfully implemented",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "File Modified**: `/workspace/StingraySoftware__HENDRICS__5.0/hendrics/efsearch.py`",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "`type=int` → `type=float`",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "The exact command from the issue description now works",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Integer values (1, 2, etc.) continue to work perfectly",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Zero and negative fractional values are properly accepted",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "All 5 accelsearch-related tests continue to pass",
+   "category": "test_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Comprehensive testing with integer, fractional, zero, and negative values",
+   "category": "action",
+   "modality": "asserted"
+  }
+ ],
+ "d2-10010": [
+  {
+   "quote": "I have successfully implemented the fix",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Changed line 257",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "All DASH plugin tests (71/71) and manifest parsing tests (44/44) pass",
+   "category": "test_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Specific BaseURL URL join tests validate the fix works correctly",
+   "category": "test_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "The exact problem scenario from the issue now works correctly",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Existing functionality is preserved",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "successfully resolves the problem",
+   "category": "generic_success",
+   "modality": "asserted"
+  }
+ ],
+ "d2-10011": [
+  {
+   "quote": "I have successfully implemented a fix",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Enhanced `git/util.py`",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Improved `remove_password_if_present()` function",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Added `redact_credentials()` function",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Modified `git/exc.py`",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Updated `CommandError.__init__()` method",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Added sanitization of command line arguments",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Added sanitization of stdout content",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Added sanitization of stderr content",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Used local import to avoid circular dependency issues",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "All existing tests continue to pass (137/137)",
+   "category": "test_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Created comprehensive test cases covering all GitHub token formats",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Verified the exact scenario described in the issue is resolved",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "No breaking changes to existing functionality",
+   "category": "generic_success",
+   "modality": "asserted"
+  }
+ ],
+ "d2-10012": [
+  {
+   "quote": "I have successfully implemented",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "I modified the `WebLink._load()` method",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Fixed KeyError",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Original issue scenario now works without errors",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "All existing tests continue to pass (41/41)",
+   "category": "test_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Edge cases handled properly",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Save/load roundtrip functionality preserved",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Properties can be accessed without errors",
+   "category": "generic_success",
+   "modality": "asserted"
+  }
+ ],
+ "d2-10013": [
+  {
+   "quote": "I have successfully implemented the fix",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Added the missing constant",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Added base64 encoding rules",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Fixed the exact examples from the issue",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "now correctly shows `\"Zm9v\"`",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Graph serialization now shows",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "all existing tests pass",
+   "category": "test_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "with various edge cases completed",
+   "category": "test_success",
+   "modality": "asserted"
+  }
+ ],
+ "d2-10014": [
+  {
+   "quote": "I have successfully implemented",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Modified line 203",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Batched data now works correctly without IndexError",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Non-batched usage continues to work unchanged",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "19/19 existing StronglyEntanglingLayers tests pass",
+   "category": "test_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Verified with various batch sizes, edge cases, and different configurations",
+   "category": "test_success",
+   "modality": "asserted"
+  }
+ ],
+ "d2-10015": [
+  {
+   "quote": "All preprocessing tests pass as well",
+   "category": "test_success",
+   "modality": "asserted"
+  }
+ ],
+ "d2-10016": [
+  {
+   "quote": "I have successfully implemented",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Changed the `required_fields`",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "The exact scenario mentioned in the issue now works",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Specs with complete contact information still work",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "The petstore-expanded.yaml fixture continues to load successfully",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "All existing tests (24/24) still pass",
+   "category": "test_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Verified that contact objects work correctly",
+   "category": "test_success",
+   "modality": "asserted"
+  }
+ ],
+ "d2-10017": [
+  {
+   "quote": "I have successfully implemented a fix",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "I created a helper function `_get_size_factor()`",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Added `_get_size_factor()` helper and updated `implement_func()`",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Updated `_numpy_method_wrap()` and added import",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "All examples from the issue now work correctly",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Additional edge cases tested and working",
+   "category": "test_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "All existing tests continue to pass",
+   "category": "test_success",
+   "modality": "asserted"
+  }
+ ],
+ "d2-10018": [],
+ "d2-10019": [
+  {
+   "quote": "I have successfully implemented a fix",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Modified the `_convert_np_result` method",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "`np.allclose(pa1, pa2)` now returns `True` for identical arrays",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Automatically handles compatible units",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Correctly raises `DimensionalityError` for incompatible units",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "other numpy functions operate correctly",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "All existing tests pass",
+   "category": "test_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "1484 passed, 155 skipped, 44 xfailed",
+   "category": "output_like",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Empty arrays, different values, precision tolerances all work correctly",
+   "category": "generic_success",
+   "modality": "asserted"
+  }
+ ],
+ "d2-10020": [
+  {
+   "quote": "I have successfully implemented a fix",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Made a minimal, targeted fix in `/workspace/ProgrammersOfVilnius__pov-server-page__1.8/src/pov_server_page/update_ports_html.py`",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Only one line changed",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "All existing tests pass (20/20 tests in test_update_ports_html.py)",
+   "category": "test_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Tested with simulated 5+ column output - no more ValueError",
+   "category": "test_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Handles scenarios with fewer or more columns gracefully",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Full `get_port_mapping()` functionality works correctly",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Fixes the exact ValueError mentioned in the issue",
+   "category": "generic_success",
+   "modality": "asserted"
+  }
+ ],
+ "d2-10021": [
+  {
+   "quote": "I have successfully implemented",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Added `ProcedureBinding` namedtuple",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Added `_procedure_bindings` list",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Added `procedure_bindings` property",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Added `add_procedure_binding()` method",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Modified `_process_derived_type_decln()` method",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Added logic to extract procedure bindings",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Modified `gen_typedecl()` method",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Added procedure binding generation",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "The fix has been thoroughly tested and verified",
+   "category": "test_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "now preserves the CONTAINS section and all procedure bindings",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "All existing tests pass",
+   "category": "test_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Types without CONTAINS sections work unchanged",
+   "category": "generic_success",
+   "modality": "asserted"
+  }
+ ],
+ "d2-10022": [
+  {
+   "quote": "I have successfully implemented group support for loggers",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Modified `simplemonitor/Loggers/logger.py`",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Added group configuration parsing",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Added `groups` property",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Modified `simplemonitor/simplemonitor.py`",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Enhanced `log_result()` method",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Added debug logging",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "The implementation was thoroughly tested",
+   "category": "test_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "All existing tests continue to pass",
+   "category": "test_success",
+   "modality": "asserted"
+  }
+ ],
+ "d2-10023": [
+  {
+   "quote": "I have successfully implemented a fix",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Modified the RedirectMiddleware",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Updated `build_redirect_request()` method",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Modified `redirect_headers()` method signature",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "All existing redirect tests pass (18/18)",
+   "category": "test_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "All model tests pass (74/74)",
+   "category": "test_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Comprehensive testing of various redirect scenarios (7/7)",
+   "category": "test_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Original issue scenario now works correctly",
+   "category": "generic_success",
+   "modality": "asserted"
+  }
+ ],
+ "d2-10024": [],
+ "d2-10025": [
+  {
+   "quote": "I have successfully implemented",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "I made minimal, focused changes to `/workspace/bugov__aiohttp-basicauth-middleware__1.1/aiohttp_basicauth_middleware/__init__.py`",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Added `Union` import",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Made `strategy` parameter optional",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Updated type annotation",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "The exact code from the bug report now works without errors",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "All existing 2-argument usage works",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "All 7 existing tests still pass",
+   "category": "test_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "3-argument usage with both callable strategies and BaseStrategy subclasses still works",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Both example files in the repository continue to function correctly",
+   "category": "generic_success",
+   "modality": "asserted"
+  }
+ ],
+ "d2-10026": [
+  {
+   "quote": "I have successfully implemented a fix",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "I modified the `bytes_to_int` function",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "The exact test case from the issue now works",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "All existing tests pass (28/28)",
+   "category": "test_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Edge cases handled",
+   "category": "generic_success",
+   "modality": "asserted"
+  }
+ ],
+ "d2-10027": [
+  {
+   "quote": "I have successfully implemented",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Updated `/workspace/CrossGL__crosstl__0.0/crosstl/src/translator/parser.py`",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "I also added support for other missing assignment operators",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "The `&=` operator now parses correctly",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "All existing tests continue to pass (22/22 tests passing)",
+   "category": "test_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "The Abstract Syntax Tree properly represents `&=` operations",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Works with complex expressions",
+   "category": "generic_success",
+   "modality": "asserted"
+  }
+ ],
+ "d2-10028": [
+  {
+   "quote": "Implementation Complete",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "I have successfully implemented validation hints",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Added New Warning Classes",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Enhanced Resource Validation",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Added detection logic in `metadata_validate()` method",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Modified Validity Calculation",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Updated `Report` and `ReportTask` classes",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "All existing tests pass, no breaking changes",
+   "category": "test_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "All existing tests pass (44/44 resource validation tests + others)",
+   "category": "test_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Warnings correctly generated for misplaced properties",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "No warnings for correct usage",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Validation reports remain valid despite warnings",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Edge cases properly handled",
+   "category": "generic_success",
+   "modality": "asserted"
+  }
+ ],
+ "d2-10029": [],
+ "d2-10030": [
+  {
+   "quote": "I have successfully implemented a fix",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Modified the `load_bintray_credentials` function",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "All existing tests continue to pass",
+   "category": "test_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Original user issue scenario now works correctly",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Returns first section credentials",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Backward compatibility maintained for single-section files",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "All existing bintray resolver tests pass (55/55)",
+   "category": "test_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Error handling preserved for malformed credentials",
+   "category": "generic_success",
+   "modality": "asserted"
+  }
+ ],
+ "d2-10031": [
+  {
+   "quote": "All compiler tests pass as well",
+   "category": "test_success",
+   "modality": "asserted"
+  }
+ ],
+ "d2-10032": [
+  {
+   "quote": "I have successfully implemented a fix",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "I added validation to the `__prepare_url` method",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "All existing session and base tests continue to pass",
+   "category": "test_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Created comprehensive regression tests",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Verified the fix works with various edge cases",
+   "category": "test_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Simulated the exact user workflow that was previously failing",
+   "category": "action",
+   "modality": "asserted"
+  }
+ ],
+ "d2-10033": [
+  {
+   "quote": "I have successfully implemented the fix",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Added `'zwo': 2` to the `CONST_NUMS` dictionary",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "`convert(\"zwo\")` now returns `2`",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "8/8 convert tests still pass",
+   "category": "test_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Compound numbers work",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Works with various capitalizations",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "\"zwo\" produces identical results",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "fully resolves the issue",
+   "category": "generic_success",
+   "modality": "asserted"
+  }
+ ],
+ "d2-10034": [],
+ "d2-10035": [
+  {
+   "quote": "I have successfully implemented",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "I made minimal, targeted changes to two files",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Added `_is_within_extract_function()` helper method to detect EXTRACT function context",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Enhanced `_split_kwds()`",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Enhanced `_stripws_parenthesis()`",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "`from from_unixtime` correctly preserved",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "All existing tests pass",
+   "category": "test_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "417 passed, 3 xfailed",
+   "category": "output_like",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Normal formatting behavior unchanged",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Various EXTRACT patterns work correctly",
+   "category": "generic_success",
+   "modality": "asserted"
+  }
+ ],
+ "d2-10036": [
+  {
+   "quote": "I have successfully implemented a fix",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "I modified the routing connection logic",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Replaced `self.xknx.current_address = self.individual_address`",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Added clear comments explaining the fix",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Gateway telegrams (1.1.255) now processed correctly",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "\"Incoming CEMI\" instead of \"Ignoring own CEMI\"",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Normal KNX/TP telegrams still work",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Actual own telegrams still filtered appropriately",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "80/80 IO tests + 39/39 CEMI tests pass",
+   "category": "test_success",
+   "modality": "asserted"
+  }
+ ],
+ "d2-10037": [
+  {
+   "quote": "I have successfully implemented a fix",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Modified `jupytext/cli.py`",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Enhanced the `pipe_notebook` function",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Added post-processing to correct misplaced cell markers",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Added `_fix_cell_markers_after_black` function",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Enhanced test coverage in `tests/test_black.py`",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Fixed existing tests that were failing due to cell ID comparisons",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Added `test_black_preserves_cell_boundaries_in_indented_blocks`",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "The exact scenario from the bug report now works correctly",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Indented cells remain separate after black formatting",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Works with nested and complex indentation patterns",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Existing functionality unaffected",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Works with both `percent` and `hydrogen` formats",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Verified the exact commands from the issue work correctly",
+   "category": "test_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Comprehensive edge case testing",
+   "category": "test_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Regression testing to ensure existing functionality remains intact",
+   "category": "test_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Unit tests added to prevent future regressions",
+   "category": "action",
+   "modality": "asserted"
+  }
+ ],
+ "d2-10038": [
+  {
+   "quote": "I have successfully implemented",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Modified File**: `/workspace/MechanicalSoup__MechanicalSoup__0.11/mechanicalsoup/browser.py`",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Added enctype detection",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Implemented conditional submission logic",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "All existing tests pass",
+   "category": "test_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "84 passed, 6 skipped",
+   "category": "output_like",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Edge cases handled properly",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Backward compatibility maintained",
+   "category": "generic_success",
+   "modality": "asserted"
+  }
+ ],
+ "d2-10039": [
+  {
+   "quote": "I have successfully implemented the required changes",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "File Modified:** `/workspace/EdinburghGenomics__EGCG-Core__0.9/egcg_core/clarity.py`",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Specific Change:** Line 116",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Dots in user sample names are now replaced with underscores",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "All existing tests continue to pass",
+   "category": "test_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Made the smallest possible change",
+   "category": "action",
+   "modality": "asserted"
+  }
+ ],
+ "d2-10040": [],
+ "d2-10041": [
+  {
+   "quote": "I have successfully implemented",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Added the missing tempo description section",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Placed the tempo section after the drums section",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Applied minimal fix",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Confirmed fix works",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "groove_midi tests continue to pass",
+   "category": "test_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "No breaking changes",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "completely resolves the documentation issue",
+   "category": "generic_success",
+   "modality": "asserted"
+  }
+ ],
+ "d2-10042": [
+  {
+   "quote": "I have successfully implemented",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Added custom `_parse_cte()` method",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Added custom `cte_sql()` method",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Added test cases to verify ClickHouse WITH statement functionality",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Parsing now works",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Generation now works",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "All existing tests pass",
+   "category": "test_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Standard SQL and other dialects continue to work normally",
+   "category": "generic_success",
+   "modality": "asserted"
+  }
+ ],
+ "d2-10043": [
+  {
+   "quote": "I have successfully implemented",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "File Modified:** `/workspace/DataDog__dd-trace-py__0.30/ddtrace/internal/logger.py`",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Lines Changed:** 113-114",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Sentry now sees 1 template instead of multiple for similar events",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "All formatted messages remain identical to original behavior",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "All existing logger tests pass (except 1 that validated the old broken behavior)",
+   "category": "test_success",
+   "modality": "hedged"
+  },
+  {
+   "quote": "Works correctly with `None` args",
+   "category": "generic_success",
+   "modality": "asserted"
+  }
+ ],
+ "d2-10044": [
+  {
+   "quote": "I have successfully implemented",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "File Modified:** `/workspace/clld__clldutils__1.5/clldutils/badge.py`",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "All existing tests pass",
+   "category": "test_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Original API works unchanged",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Can specify components independently",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Special characters properly escaped",
+   "category": "generic_success",
+   "modality": "asserted"
+  }
+ ],
+ "d2-10045": [
+  {
+   "quote": "I have successfully implemented the required changes",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Modified the `_get_system_details()` function",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Refactored environment string construction",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Updated the test to match the new expected behavior",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Changed test expectation",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Updated docstring to reflect new behavior",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "All system details tests pass (4/4)",
+   "category": "test_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "All main module tests pass (117/117)",
+   "category": "test_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Real-world integration verified with actual charmcraft commands",
+   "category": "test_success",
+   "modality": "asserted"
+  }
+ ],
+ "d2-10046": [
+  {
+   "quote": "I have successfully implemented the backend validation functionality",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Added `validate_dataset_model` method",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Modified `upload_new_dataset_now` method",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Added backend validation call before file upload",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Extended `FakeScicatClient`",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "All existing tests pass (149+ tests verified)",
+   "category": "test_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "12/12 passed",
+   "category": "output_like",
+   "modality": "asserted"
+  },
+  {
+   "quote": "6/6 passed",
+   "category": "output_like",
+   "modality": "asserted"
+  },
+  {
+   "quote": "131/131 passed",
+   "category": "output_like",
+   "modality": "asserted"
+  },
+  {
+   "quote": "All scenarios working correctly",
+   "category": "test_success",
+   "modality": "asserted"
+  }
+ ],
+ "d2-10047": [
+  {
+   "quote": "Successfully implemented constructor argument type validation",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Added type validation for all constructor arguments",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Modified `ClientBase.__init__` method",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Added 4 validation lines",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "All 32 existing tests pass",
+   "category": "test_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Constructor validation works for all argument types",
+   "category": "generic_success",
+   "modality": "asserted"
+  }
+ ],
+ "d2-10048": [
+  {
+   "quote": "I have successfully implemented",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Added a condition check in the `get_minutes` function",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Issue-specific case: `get_minutes(\"Pá-Pum\")` returns `None`",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "All existing utils tests pass (19/19)",
+   "category": "test_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Panelinha scraper with valid times still works",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "still works",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Edge cases properly handled",
+   "category": "generic_success",
+   "modality": "asserted"
+  }
+ ],
+ "d2-10049": [
+  {
+   "quote": "Issue Successfully Fixed!",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "I have successfully implemented",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "File Modified:** `/workspace/influxdata__influxdb-client-python__1.41/influxdb_client/client/write/dataframe_serializer.py`",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Updated the `_not_nan(x)` function",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Original reproduction case now works",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "All existing DataFrame serialization tests still pass",
+   "category": "test_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "21/22 passed, 1 skipped",
+   "category": "output_like",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Comprehensive testing with various nullable types",
+   "category": "test_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Edge case testing with different data types",
+   "category": "test_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Backward compatibility verified with float NaN values",
+   "category": "test_success",
+   "modality": "asserted"
+  }
+ ],
+ "d2-10050": [
+  {
+   "quote": "I have successfully implemented a fix",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "I modified the `write_OBvalue` function",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Created comprehensive tests covering edge cases",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Verified the fix resolves the original EncapsulatedDocument issue",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Confirmed all existing tests still pass",
+   "category": "test_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Tested both direct function usage and dataset context scenarios",
+   "category": "test_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Ensured backward compatibility is maintained",
+   "category": "generic_success",
+   "modality": "asserted"
+  }
+ ],
+ "d2-10051": [
+  {
+   "quote": "I have successfully implemented",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "I created a **MANIFEST.in** file",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Building source distributions and verifying LICENSE file inclusion",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Testing core library functionality",
+   "category": "test_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Running existing test suites to ensure no regressions",
+   "category": "test_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Verifying test files are properly excluded from distributions",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "The LICENSE file is now explicitly included",
+   "category": "generic_success",
+   "modality": "asserted"
+  }
+ ],
+ "d2-10052": [
+  {
+   "quote": "I have successfully implemented",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "I made minimal, focused changes to `/workspace/webscopeio__license.sh__1.0/license_sh/helpers.py`",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Enhanced `extract_npm_license()` function",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Added checks for `isinstance(license_name, dict)`",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Applied same logic to version-specific license data",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Modified `is_license_ok()` function",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Added early check",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Both original issues are resolved",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "All existing tests pass",
+   "category": "test_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "No breaking changes to existing functionality",
+   "category": "generic_success",
+   "modality": "asserted"
+  }
+ ],
+ "d2-10053": [
+  {
+   "quote": "I have successfully implemented",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Updated `/src/bytecode/instr.py`",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Moved `IN`, `NOT_IN`, `IS`, `IS_NOT`, and `EXC_MATCH` inside a version check",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Updated `/src/bytecode/peephole_opt.py`",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Made the `NOT_COMPARE` dictionary version-specific",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Updated the `build_tuple` method",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Added proper version checks",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Compare enum now aligns with Python 3.9's `dis.cmp_op`",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Maintained backward compatibility",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Core functionality tests pass",
+   "category": "test_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "New opcode approach works",
+   "category": "generic_success",
+   "modality": "asserted"
+  }
+ ],
+ "d2-10054": [
+  {
+   "quote": "I have successfully implemented a fix",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Modified the `symbol_like` function",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Updated the `symbol_like` function",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Added logic to distinguish",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "`(setv Nan 5)` now compiles successfully",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "`nan` and `inf` still work as float literals",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "113/113 core tests pass",
+   "category": "test_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Comprehensive testing confirms robust behavior",
+   "category": "test_success",
+   "modality": "asserted"
+  }
+ ],
+ "d2-10055": [],
+ "d2-10056": [
+  {
+   "quote": "I have successfully implemented the requested feature",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Modified file:** `/workspace/robin900__gspread-dataframe__3.3/gspread_dataframe.py`",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Added `drop_empty_rows` parameter",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Added `drop_empty_columns` parameter",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Implemented efficient trimming logic",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Updated function documentation",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Created comprehensive tests",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "proving the functionality works correctly",
+   "category": "test_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Verified that existing test suite behavior is unchanged (same pre-existing failures unrelated to this change)",
+   "category": "test_success",
+   "modality": "hedged"
+  },
+  {
+   "quote": "Demonstrated that the exact problem described in the issue is solved",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Confirmed the solution works with various combinations",
+   "category": "generic_success",
+   "modality": "asserted"
+  }
+ ],
+ "d2-10057": [
+  {
+   "quote": "Issue Resolution Complete",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "I have successfully implemented",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Removed the single early `return` statement",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Line 189 - removed early return statement",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "now works instead of failing",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Mixed variables now correctly store BOTH resdata AND universe data",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "All existing functionality continues to work without regression",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Main functionality tests still pass",
+   "category": "test_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Both examples from the issue description now work correctly",
+   "category": "generic_success",
+   "modality": "asserted"
+  }
+ ],
+ "d2-10058": [
+  {
+   "quote": "I have successfully implemented a fix",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "I modified the `guess_next_simple_semver()` function",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Both version schemes now work with `normalize=False`",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Invalid version formats still properly raise errors",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "84/84 tests in the core modules pass",
+   "category": "test_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Various pre-release formats work correctly",
+   "category": "generic_success",
+   "modality": "asserted"
+  }
+ ],
+ "d2-10059": [
+  {
+   "quote": "I have successfully implemented",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "I modified the `SDFDataStore.load()` method",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Added a sanitize function",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Applied sanitization consistently",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Preserved original names",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Handled edge cases",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Updated coordinate name handling",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Added `_sanitize_var_name()` helper function",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Applied sanitization to variable names",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Ensured dimension names are also sanitized",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Added long_name attribute preservation",
+   "category": "action",
+   "modality": "asserted"
+  },
+  {
+   "quote": "The fix was thoroughly tested and verified",
+   "category": "test_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "Successfully export datasets with forward slashes to NetCDF format",
+   "category": "generic_success",
+   "modality": "asserted"
+  },
+  {
+   "quote": "successfully resolves the `ValueError",
+   "category": "generic_success",
+   "modality": "asserted"
+  }
+ ]
+}

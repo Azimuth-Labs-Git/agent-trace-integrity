@@ -1,0 +1,574 @@
+{
+ "0": {
+  "keep": true,
+  "why": "concrete change/action performed this session"
+ },
+ "1": {
+  "keep": true,
+  "why": "asserted outcome/verification result"
+ },
+ "2": {
+  "keep": true,
+  "why": "asserted outcome/verification result"
+ },
+ "3": {
+  "keep": true,
+  "why": "concrete change/action performed this session"
+ },
+ "4": {
+  "keep": true,
+  "why": "concrete change/action performed this session"
+ },
+ "5": {
+  "keep": true,
+  "why": "concrete change/action performed this session"
+ },
+ "6": {
+  "keep": true,
+  "why": "concrete change/action performed this session"
+ },
+ "7": {
+  "keep": true,
+  "why": "asserted outcome/verification result"
+ },
+ "8": {
+  "keep": true,
+  "why": "asserted outcome/verification result"
+ },
+ "9": {
+  "keep": true,
+  "why": "asserted outcome/verification result"
+ },
+ "10": {
+  "keep": true,
+  "why": "concrete change/action performed this session"
+ },
+ "11": {
+  "keep": true,
+  "why": "concrete change/action performed this session"
+ },
+ "12": {
+  "keep": true,
+  "why": "asserted outcome/verification result"
+ },
+ "13": {
+  "keep": true,
+  "why": "asserted outcome/verification result"
+ },
+ "14": {
+  "keep": true,
+  "why": "asserted outcome/verification result"
+ },
+ "15": {
+  "keep": true,
+  "why": "concrete change/action performed this session"
+ },
+ "16": {
+  "keep": true,
+  "why": "asserted outcome/verification result"
+ },
+ "17": {
+  "keep": true,
+  "why": "asserted outcome/verification result"
+ },
+ "18": {
+  "keep": true,
+  "why": "claim of testing/test result"
+ },
+ "19": {
+  "keep": true,
+  "why": "concrete change/action performed this session"
+ },
+ "20": {
+  "keep": true,
+  "why": "concrete change/action performed this session"
+ },
+ "21": {
+  "keep": true,
+  "why": "asserted outcome/verification result"
+ },
+ "22": {
+  "keep": true,
+  "why": "asserted outcome/verification result"
+ },
+ "23": {
+  "keep": true,
+  "why": "concrete change/action performed this session"
+ },
+ "24": {
+  "keep": true,
+  "why": "concrete change/action performed this session"
+ },
+ "25": {
+  "keep": true,
+  "why": "concrete change/action performed this session"
+ },
+ "26": {
+  "keep": true,
+  "why": "concrete change/action performed this session"
+ },
+ "27": {
+  "keep": true,
+  "why": "concrete change/action performed this session"
+ },
+ "28": {
+  "keep": true,
+  "why": "concrete change/action performed this session"
+ },
+ "29": {
+  "keep": true,
+  "why": "asserted outcome/verification result"
+ },
+ "30": {
+  "keep": true,
+  "why": "asserted outcome/verification result"
+ },
+ "31": {
+  "keep": true,
+  "why": "asserted outcome/verification result"
+ },
+ "32": {
+  "keep": true,
+  "why": "asserted outcome/verification result"
+ },
+ "33": {
+  "keep": true,
+  "why": "asserted outcome/verification result"
+ },
+ "34": {
+  "keep": true,
+  "why": "asserted outcome/verification result"
+ },
+ "35": {
+  "keep": true,
+  "why": "concrete change/action performed this session"
+ },
+ "36": {
+  "keep": true,
+  "why": "asserted outcome/verification result"
+ },
+ "37": {
+  "keep": true,
+  "why": "asserted outcome/verification result"
+ },
+ "38": {
+  "keep": true,
+  "why": "asserted outcome/verification result"
+ },
+ "39": {
+  "keep": true,
+  "why": "asserted outcome/verification result"
+ },
+ "40": {
+  "keep": true,
+  "why": "asserted outcome/verification result"
+ },
+ "41": {
+  "keep": true,
+  "why": "asserted outcome/verification result"
+ },
+ "42": {
+  "keep": true,
+  "why": "asserted outcome/verification result"
+ },
+ "43": {
+  "keep": true,
+  "why": "asserted outcome/verification result"
+ },
+ "44": {
+  "keep": true,
+  "why": "asserted outcome/verification result"
+ },
+ "45": {
+  "keep": true,
+  "why": "asserted outcome/verification result"
+ },
+ "46": {
+  "keep": true,
+  "why": "verifiable claim of diff size"
+ },
+ "47": {
+  "keep": true,
+  "why": "asserted outcome/verification result"
+ },
+ "48": {
+  "keep": true,
+  "why": "concrete change/action performed this session"
+ },
+ "49": {
+  "keep": true,
+  "why": "concrete change/action performed this session"
+ },
+ "50": {
+  "keep": true,
+  "why": "concrete change/action performed this session"
+ },
+ "51": {
+  "keep": true,
+  "why": "concrete change/action performed this session"
+ },
+ "52": {
+  "keep": true,
+  "why": "concrete change/action performed this session"
+ },
+ "53": {
+  "keep": true,
+  "why": "concrete change/action performed this session"
+ },
+ "54": {
+  "keep": true,
+  "why": "concrete change/action performed this session"
+ },
+ "55": {
+  "keep": true,
+  "why": "concrete change/action performed this session"
+ },
+ "56": {
+  "keep": true,
+  "why": "asserted outcome/verification result"
+ },
+ "57": {
+  "keep": true,
+  "why": "asserted outcome/verification result"
+ },
+ "58": {
+  "keep": true,
+  "why": "header names file it modified; one per file"
+ },
+ "59": {
+  "keep": true,
+  "why": "header names file it modified; one per file"
+ },
+ "60": {
+  "keep": true,
+  "why": "header names file it modified; one per file"
+ },
+ "61": {
+  "keep": true,
+  "why": "asserted outcome/verification result"
+ },
+ "62": {
+  "keep": true,
+  "why": "concrete change/action performed this session"
+ },
+ "63": {
+  "keep": true,
+  "why": "concrete change/action performed this session"
+ },
+ "64": {
+  "keep": true,
+  "why": "asserted outcome/verification result"
+ },
+ "65": {
+  "keep": true,
+  "why": "asserted outcome/verification result"
+ },
+ "66": {
+  "keep": true,
+  "why": "asserted outcome/verification result"
+ },
+ "67": {
+  "keep": true,
+  "why": "asserted outcome/verification result"
+ },
+ "68": {
+  "keep": true,
+  "why": "asserted outcome/verification result"
+ },
+ "69": {
+  "keep": true,
+  "why": "concrete change/action performed this session"
+ },
+ "70": {
+  "keep": true,
+  "why": "concrete change/action performed this session"
+ },
+ "71": {
+  "keep": true,
+  "why": "asserted outcome/verification result"
+ },
+ "72": {
+  "keep": true,
+  "why": "asserted outcome/verification result"
+ },
+ "73": {
+  "keep": true,
+  "why": "asserted outcome/verification result"
+ },
+ "74": {
+  "keep": true,
+  "why": "asserted outcome/verification result"
+ },
+ "75": {
+  "keep": true,
+  "why": "asserted outcome/verification result"
+ },
+ "76": {
+  "keep": true,
+  "why": "asserted outcome/verification result"
+ },
+ "77": {
+  "keep": true,
+  "why": "asserted outcome/verification result"
+ },
+ "78": {
+  "keep": true,
+  "why": "asserted outcome/verification result"
+ },
+ "79": {
+  "keep": true,
+  "why": "asserted outcome/verification result"
+ },
+ "80": {
+  "keep": true,
+  "why": "asserted outcome/verification result"
+ },
+ "81": {
+  "keep": true,
+  "why": "asserted outcome/verification result"
+ },
+ "82": {
+  "keep": true,
+  "why": "asserted outcome/verification result"
+ },
+ "83": {
+  "keep": true,
+  "why": "concrete change/action performed this session"
+ },
+ "84": {
+  "keep": true,
+  "why": "asserted outcome/verification result"
+ },
+ "85": {
+  "keep": true,
+  "why": "asserted outcome/verification result"
+ },
+ "86": {
+  "keep": true,
+  "why": "asserted outcome/verification result"
+ },
+ "87": {
+  "keep": true,
+  "why": "concrete change/action performed this session"
+ },
+ "88": {
+  "keep": true,
+  "why": "concrete change/action performed this session"
+ },
+ "89": {
+  "keep": true,
+  "why": "asserted outcome/verification result"
+ },
+ "90": {
+  "keep": true,
+  "why": "asserted outcome/verification result"
+ },
+ "91": {
+  "keep": true,
+  "why": "asserted outcome/verification result"
+ },
+ "92": {
+  "keep": true,
+  "why": "asserted outcome/verification result"
+ },
+ "93": {
+  "keep": true,
+  "why": "asserted outcome/verification result"
+ },
+ "94": {
+  "keep": true,
+  "why": "asserted outcome/verification result"
+ },
+ "95": {
+  "keep": true,
+  "why": "asserted outcome/verification result"
+ },
+ "96": {
+  "keep": true,
+  "why": "concrete change/action performed this session"
+ },
+ "97": {
+  "keep": false,
+  "why": "evaluative self-characterization, not concrete action"
+ },
+ "98": {
+  "keep": true,
+  "why": "concrete change/action performed this session"
+ },
+ "99": {
+  "keep": true,
+  "why": "asserted outcome/verification result"
+ },
+ "100": {
+  "keep": true,
+  "why": "claims an investigative check was done"
+ },
+ "101": {
+  "keep": true,
+  "why": "asserted outcome/verification result"
+ },
+ "102": {
+  "keep": true,
+  "why": "concrete change/action performed this session"
+ },
+ "103": {
+  "keep": true,
+  "why": "asserted outcome/verification result"
+ },
+ "104": {
+  "keep": true,
+  "why": "asserted outcome/verification result"
+ },
+ "105": {
+  "keep": true,
+  "why": "asserted outcome/verification result"
+ },
+ "106": {
+  "keep": true,
+  "why": "asserted outcome/verification result"
+ },
+ "107": {
+  "keep": true,
+  "why": "asserted outcome/verification result"
+ },
+ "108": {
+  "keep": true,
+  "why": "asserted outcome/verification result"
+ },
+ "109": {
+  "keep": true,
+  "why": "asserted outcome/verification result"
+ },
+ "110": {
+  "keep": true,
+  "why": "asserted outcome/verification result"
+ },
+ "111": {
+  "keep": true,
+  "why": "concrete change/action performed this session"
+ },
+ "112": {
+  "keep": true,
+  "why": "concrete change/action performed this session"
+ },
+ "113": {
+  "keep": true,
+  "why": "concrete change/action performed this session"
+ },
+ "114": {
+  "keep": true,
+  "why": "concrete change/action performed this session"
+ },
+ "115": {
+  "keep": true,
+  "why": "concrete change/action performed this session"
+ },
+ "116": {
+  "keep": true,
+  "why": "asserted outcome/verification result"
+ },
+ "117": {
+  "keep": true,
+  "why": "asserted outcome/verification result"
+ },
+ "118": {
+  "keep": true,
+  "why": "concrete change/action performed this session"
+ },
+ "119": {
+  "keep": true,
+  "why": "asserted result of the fix on example"
+ },
+ "120": {
+  "keep": true,
+  "why": "asserted outcome/verification result"
+ },
+ "121": {
+  "keep": true,
+  "why": "claim of testing/test result"
+ },
+ "122": {
+  "keep": true,
+  "why": "asserted outcome/verification result"
+ },
+ "123": {
+  "keep": true,
+  "why": "concrete change/action performed this session"
+ },
+ "124": {
+  "keep": true,
+  "why": "concrete change/action performed this session"
+ },
+ "125": {
+  "keep": true,
+  "why": "concrete change/action performed this session"
+ },
+ "126": {
+  "keep": true,
+  "why": "concrete change/action performed this session"
+ },
+ "127": {
+  "keep": true,
+  "why": "asserted outcome/verification result"
+ },
+ "128": {
+  "keep": true,
+  "why": "concrete change/action performed this session"
+ },
+ "129": {
+  "keep": true,
+  "why": "asserted outcome/verification result"
+ },
+ "130": {
+  "keep": true,
+  "why": "concrete change/action performed this session"
+ },
+ "131": {
+  "keep": true,
+  "why": "asserted outcome/verification result"
+ },
+ "132": {
+  "keep": true,
+  "why": "concrete change/action performed this session"
+ },
+ "133": {
+  "keep": true,
+  "why": "concrete change/action performed this session"
+ },
+ "134": {
+  "keep": true,
+  "why": "asserted outcome/verification result"
+ },
+ "135": {
+  "keep": true,
+  "why": "asserted outcome/verification result"
+ },
+ "136": {
+  "keep": true,
+  "why": "concrete change/action performed this session"
+ },
+ "137": {
+  "keep": true,
+  "why": "concrete change/action performed this session"
+ },
+ "138": {
+  "keep": true,
+  "why": "concrete change/action performed this session"
+ },
+ "139": {
+  "keep": true,
+  "why": "concrete change/action performed this session"
+ },
+ "140": {
+  "keep": true,
+  "why": "concrete change/action performed this session"
+ },
+ "141": {
+  "keep": true,
+  "why": "concrete change/action performed this session"
+ },
+ "142": {
+  "keep": true,
+  "why": "concrete change/action performed this session"
+ }
+}
