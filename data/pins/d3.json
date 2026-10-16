@@ -1,0 +1,160 @@
+{
+ "repo": "PalisadeResearch/shutdown_avoidance",
+ "commit": "df0ce52e90aed38e8721b54058a5d46923a34583",
+ "logs": [
+  {
+   "file": "2025-05-20T12-06-19-07-00_shutdown-avoidance_mKjYsUHmSNv4rSgLgeZSyz.eval",
+   "url": "https://raw.githubusercontent.com/PalisadeResearch/shutdown_avoidance/df0ce52e90aed38e8721b54058a5d46923a34583/docs/inspect_logs/logs/2025-05-20T12-06-19-07-00_shutdown-avoidance_mKjYsUHmSNv4rSgLgeZSyz.eval",
+   "sha256": "efe251b2587c005b9f161289e18fd49f8b4db66f8cafe510abc40eed32fe21c3",
+   "model": "openrouter/google/gemini-2.5-pro-preview",
+   "samples": 100
+  },
+  {
+   "file": "2025-05-21T10-34-42-07-00_shutdown-avoidance_UPdMvzzfTxzTfQ88vx8G3t.eval",
+   "url": "https://raw.githubusercontent.com/PalisadeResearch/shutdown_avoidance/df0ce52e90aed38e8721b54058a5d46923a34583/docs/inspect_logs/logs/2025-05-21T10-34-42-07-00_shutdown-avoidance_UPdMvzzfTxzTfQ88vx8G3t.eval",
+   "sha256": "a41ded622776c3f5a10676aff092c948e59628467cb283ccbc968bae59a5f4ae",
+   "model": "anthropic/claude-3-7-sonnet-latest",
+   "samples": 100
+  },
+  {
+   "file": "2025-05-22T10-53-05-07-00_shutdown-avoidance_PfKgYE8fZdYxmchU2RnJmV.eval",
+   "url": "https://raw.githubusercontent.com/PalisadeResearch/shutdown_avoidance/df0ce52e90aed38e8721b54058a5d46923a34583/docs/inspect_logs/logs/2025-05-22T10-53-05-07-00_shutdown-avoidance_PfKgYE8fZdYxmchU2RnJmV.eval",
+   "sha256": "22faa7020be856b01d3b696f580db7bd16431532696f0f9f86a52dfc069cc001",
+   "model": "anthropic/claude-sonnet-4-0",
+   "samples": 100
+  },
+  {
+   "file": "2025-05-22T12-39-49-07-00_shutdown-avoidance_f8WdXwwWnyB9iCNsyArtLJ.eval",
+   "url": "https://raw.githubusercontent.com/PalisadeResearch/shutdown_avoidance/df0ce52e90aed38e8721b54058a5d46923a34583/docs/inspect_logs/logs/2025-05-22T12-39-49-07-00_shutdown-avoidance_f8WdXwwWnyB9iCNsyArtLJ.eval",
+   "sha256": "4fa9b2e9f0257c7cc5baf21b30e00512d15a5e622bbb54a965782676f1e715a4",
+   "model": "openrouter/google/gemini-2.5-pro-preview",
+   "samples": 100
+  },
+  {
+   "file": "2025-05-22T12-46-56-07-00_shutdown-avoidance_at439Rnrgmq66HTN6oRZSK.eval",
+   "url": "https://raw.githubusercontent.com/PalisadeResearch/shutdown_avoidance/df0ce52e90aed38e8721b54058a5d46923a34583/docs/inspect_logs/logs/2025-05-22T12-46-56-07-00_shutdown-avoidance_at439Rnrgmq66HTN6oRZSK.eval",
+   "sha256": "2644ea6b52c7e37b62ce1296b2c142fbda1d71b08862c25f0e54b0b56ef85c52",
+   "model": "openrouter/x-ai/grok-3-beta",
+   "samples": 100
+  },
+  {
+   "file": "2025-05-22T12-54-45-07-00_shutdown-avoidance_FoCBsakYgnbcWep5x8U5rv.eval",
+   "url": "https://raw.githubusercontent.com/PalisadeResearch/shutdown_avoidance/df0ce52e90aed38e8721b54058a5d46923a34583/docs/inspect_logs/logs/2025-05-22T12-54-45-07-00_shutdown-avoidance_FoCBsakYgnbcWep5x8U5rv.eval",
+   "sha256": "d452ace4b422e4209e543d95f9fddf330ac2f8988ef0091bb9dad3a742c473d6",
+   "model": "openai/o4-mini",
+   "samples": 100
+  },
+  {
+   "file": "2025-05-22T13-09-58-07-00_shutdown-avoidance_fBSGz459mWou9BquZr4Vbg.eval",
+   "url": "https://raw.githubusercontent.com/PalisadeResearch/shutdown_avoidance/df0ce52e90aed38e8721b54058a5d46923a34583/docs/inspect_logs/logs/2025-05-22T13-09-58-07-00_shutdown-avoidance_fBSGz459mWou9BquZr4Vbg.eval",
+   "sha256": "cf94d1f4b5d8e5ba373fac60f447896dd110fef4469a7dd6540f7d9e96f75840",
+   "model": "openai/codex-mini-latest",
+   "samples": 100
+  },
+  {
+   "file": "2025-05-22T13-43-39-07-00_shutdown-avoidance_GBJyKEwqca8UNJw5rY95wu.eval",
+   "url": "https://raw.githubusercontent.com/PalisadeResearch/shutdown_avoidance/df0ce52e90aed38e8721b54058a5d46923a34583/docs/inspect_logs/logs/2025-05-22T13-43-39-07-00_shutdown-avoidance_GBJyKEwqca8UNJw5rY95wu.eval",
+   "sha256": "451d2aecf0498bfeb6eca3a1b3fea25c684224ab7a8ce57b8e96a0a894477858",
+   "model": "anthropic/claude-3-7-sonnet-latest",
+   "samples": 100
+  },
+  {
+   "file": "2025-05-22T13-57-39-07-00_shutdown-avoidance_hCiUuqmmJc3S4NEGAQzcP5.eval",
+   "url": "https://raw.githubusercontent.com/PalisadeResearch/shutdown_avoidance/df0ce52e90aed38e8721b54058a5d46923a34583/docs/inspect_logs/logs/2025-05-22T13-57-39-07-00_shutdown-avoidance_hCiUuqmmJc3S4NEGAQzcP5.eval",
+   "sha256": "6f718954c1aae0e2e9137a88c9aeb1693f3327ea0532ace0757aa16065068d42",
+   "model": "openrouter/x-ai/grok-3-beta",
+   "samples": 100
+  },
+  {
+   "file": "2025-05-22T14-09-48-07-00_shutdown-avoidance_RWLLYzTJvFQgKqwhHgdgwM.eval",
+   "url": "https://raw.githubusercontent.com/PalisadeResearch/shutdown_avoidance/df0ce52e90aed38e8721b54058a5d46923a34583/docs/inspect_logs/logs/2025-05-22T14-09-48-07-00_shutdown-avoidance_RWLLYzTJvFQgKqwhHgdgwM.eval",
+   "sha256": "8abf053a3a50cab19d6d16ed9fbf5631bcd1a53c29f00c6ef2211a589f7fdec0",
+   "model": "openai/o4-mini",
+   "samples": 100
+  },
+  {
+   "file": "2025-05-22T14-28-56-07-00_shutdown-avoidance_moReoGKNRrN4aoUz8Bf2vS.eval",
+   "url": "https://raw.githubusercontent.com/PalisadeResearch/shutdown_avoidance/df0ce52e90aed38e8721b54058a5d46923a34583/docs/inspect_logs/logs/2025-05-22T14-28-56-07-00_shutdown-avoidance_moReoGKNRrN4aoUz8Bf2vS.eval",
+   "sha256": "281e51c35ac93b40aa1253d1feebbc9ec35808d283b6a076bee29bd4ca1b4351",
+   "model": "openai/o3",
+   "samples": 100
+  },
+  {
+   "file": "2025-05-22T14-45-23-07-00_shutdown-avoidance_6h5fBnbxFdLTAjtgYavpnD.eval",
+   "url": "https://raw.githubusercontent.com/PalisadeResearch/shutdown_avoidance/df0ce52e90aed38e8721b54058a5d46923a34583/docs/inspect_logs/logs/2025-05-22T14-45-23-07-00_shutdown-avoidance_6h5fBnbxFdLTAjtgYavpnD.eval",
+   "sha256": "570ab449b5a6c8e91a7e8b06caab2dff4c9d3da7a347991b2628095d2a47c159",
+   "model": "anthropic/claude-sonnet-4-0",
+   "samples": 100
+  },
+  {
+   "file": "2025-05-22T16-00-13-07-00_shutdown-avoidance_nG2AR3Tfk8qzR6dMC8P2wa.eval",
+   "url": "https://raw.githubusercontent.com/PalisadeResearch/shutdown_avoidance/df0ce52e90aed38e8721b54058a5d46923a34583/docs/inspect_logs/logs/2025-05-22T16-00-13-07-00_shutdown-avoidance_nG2AR3Tfk8qzR6dMC8P2wa.eval",
+   "sha256": "8290f3eaf2f889fd672425c10f9c581edf1f21e166737b88d4e70ddb10a9649a",
+   "model": "openai/o3",
+   "samples": 100
+  },
+  {
+   "file": "2025-05-22T16-00-22-07-00_shutdown-avoidance_XcCGrG4H4wnK78SxwT2s9R.eval",
+   "url": "https://raw.githubusercontent.com/PalisadeResearch/shutdown_avoidance/df0ce52e90aed38e8721b54058a5d46923a34583/docs/inspect_logs/logs/2025-05-22T16-00-22-07-00_shutdown-avoidance_XcCGrG4H4wnK78SxwT2s9R.eval",
+   "sha256": "1d612f31530823c3a73949ae2a27b0f05223ac7381d31bb1f67c0b58e971f3ea",
+   "model": "anthropic/claude-opus-4-0",
+   "samples": 100
+  },
+  {
+   "file": "2025-05-22T16-12-01-07-00_shutdown-avoidance_F4dWhURnMVj6goqiYibSGk.eval",
+   "url": "https://raw.githubusercontent.com/PalisadeResearch/shutdown_avoidance/df0ce52e90aed38e8721b54058a5d46923a34583/docs/inspect_logs/logs/2025-05-22T16-12-01-07-00_shutdown-avoidance_F4dWhURnMVj6goqiYibSGk.eval",
+   "sha256": "30aeb527c18fc108f672b61468b2ac46c63a849773840d7f9fbe87018e7fc702",
+   "model": "anthropic/claude-opus-4-0",
+   "samples": 100
+  },
+  {
+   "file": "2025-05-22T16-19-04-07-00_shutdown-avoidance_firtxJL2MbyYjJ4uJ6d7Gu.eval",
+   "url": "https://raw.githubusercontent.com/PalisadeResearch/shutdown_avoidance/df0ce52e90aed38e8721b54058a5d46923a34583/docs/inspect_logs/logs/2025-05-22T16-19-04-07-00_shutdown-avoidance_firtxJL2MbyYjJ4uJ6d7Gu.eval",
+   "sha256": "f60b9d25c8b548c39fdd37fb97764053e14578b0e07b6ea28ae6115d91231eb3",
+   "model": "openai/codex-mini-latest",
+   "samples": 100
+  },
+  {
+   "file": "2025-05-23T10-22-55-07-00_shutdown-avoidance_3RwgWyzLDLdLXPmVCuCjFL.eval",
+   "url": "https://raw.githubusercontent.com/PalisadeResearch/shutdown_avoidance/df0ce52e90aed38e8721b54058a5d46923a34583/docs/inspect_logs/logs/2025-05-23T10-22-55-07-00_shutdown-avoidance_3RwgWyzLDLdLXPmVCuCjFL.eval",
+   "sha256": "8c429b8e1e9abe0e3f0ac7682ba79c884c14b46101d0ddb4266f0b926fd8d834",
+   "model": "anthropic/claude-3-opus-latest",
+   "samples": 100
+  },
+  {
+   "file": "2025-05-23T10-54-52-07-00_shutdown-avoidance_dgaAotsTxZZNbxCKsUwDzD.eval",
+   "url": "https://raw.githubusercontent.com/PalisadeResearch/shutdown_avoidance/df0ce52e90aed38e8721b54058a5d46923a34583/docs/inspect_logs/logs/2025-05-23T10-54-52-07-00_shutdown-avoidance_dgaAotsTxZZNbxCKsUwDzD.eval",
+   "sha256": "6afd5311f3d57a618c61be80a9dace2bc31c90a2b5290abb9f5f4e7f6c65efaa",
+   "model": "anthropic/claude-3-opus-latest",
+   "samples": 100
+  },
+  {
+   "file": "2025-05-23T15-30-48-07-00_shutdown-avoidance_mgNHTRdut2bxes2NMVUKgq.eval",
+   "url": "https://raw.githubusercontent.com/PalisadeResearch/shutdown_avoidance/df0ce52e90aed38e8721b54058a5d46923a34583/docs/inspect_logs/logs/2025-05-23T15-30-48-07-00_shutdown-avoidance_mgNHTRdut2bxes2NMVUKgq.eval",
+   "sha256": "0cfd11d52b9b34827fe1abad0f11427ebc4de06b26dd10c8a5524a0205c4bc4d",
+   "model": "openai/gpt-4o",
+   "samples": 100
+  },
+  {
+   "file": "2025-05-23T15-39-58-07-00_shutdown-avoidance_PDjTe2tLUYjvyfjtJ9UMG5.eval",
+   "url": "https://raw.githubusercontent.com/PalisadeResearch/shutdown_avoidance/df0ce52e90aed38e8721b54058a5d46923a34583/docs/inspect_logs/logs/2025-05-23T15-39-58-07-00_shutdown-avoidance_PDjTe2tLUYjvyfjtJ9UMG5.eval",
+   "sha256": "71f54ed0ee2f109fc57113c734582a0ac68ac198c5ba9c07c583bc177189fd7f",
+   "model": "openai/gpt-4o",
+   "samples": 100
+  },
+  {
+   "file": "2025-05-23T17-11-26-07-00_shutdown-avoidance_JuoRt87sf4JQmWmmFBAvtp.eval",
+   "url": "https://raw.githubusercontent.com/PalisadeResearch/shutdown_avoidance/df0ce52e90aed38e8721b54058a5d46923a34583/docs/inspect_logs/logs/2025-05-23T17-11-26-07-00_shutdown-avoidance_JuoRt87sf4JQmWmmFBAvtp.eval",
+   "sha256": "282dce09e73e6f34312fe11d0bb8e478f104c7917a77229355bb4176cec35eb2",
+   "model": "openai/o1-preview",
+   "samples": 100
+  },
+  {
+   "file": "2025-05-23T17-44-10-07-00_shutdown-avoidance_k4ZLjufNPxVEri3U8xxxxN.eval",
+   "url": "https://raw.githubusercontent.com/PalisadeResearch/shutdown_avoidance/df0ce52e90aed38e8721b54058a5d46923a34583/docs/inspect_logs/logs/2025-05-23T17-44-10-07-00_shutdown-avoidance_k4ZLjufNPxVEri3U8xxxxN.eval",
+   "sha256": "6ca82482bb41964afd106eb334f98ef351a926c724a4e3b003612067f3fe48bc",
+   "model": "openai/o1-preview",
+   "samples": 100
+  }
+ ]
+}

@@ -5,9 +5,40 @@ source". The record of what actually happened is usually sitting in the agent's 
 nobody reads it. This tool will read those traces and, for each claim the agent makes about an
 action, say whether the trace backs it up.
 
-**Status: pre-release.** This repo holds the draft input and output schemas and one worked example.
-There is no working code yet. It is being built under a proposed 12-week project, and the schemas
-freeze in week 4.
+**Status: v0, preliminary.** A working rule-based checker exists today (see "What works today"
+below) and has been run on public agent runs; the results are in
+[results/README.md](results/README.md). It is still pre-release: the schemas are drafts, every
+result is preliminary, and the full tool is being built under a proposed 12-week project, with the
+schemas freezing in week 4.
+
+## What works today
+
+v0 is plain Python with no AI model inside the checker.
+
+- **Adapters** turn five log formats into one event model: OpenTelemetry GenAI (`otel`),
+  OpenHands (`openhands`), SWE-bench / mini-swe-agent trajectories (`swebench`), Inspect logs
+  (`inspect`) and pasted Gemini CLI transcripts (`gemini-text`). A METR MALT adapter (`malt`)
+  is planned and not built yet.
+- **Claim finder:** plain rules that find claims about actions and results in what the agent wrote
+  to the user (never its hidden reasoning), tagged as asserted, hedged or borderline.
+- **Verdict rules** for sub-type 1 (action claimed but never taken) and sub-type 3 (success
+  narrated over a failed test run), with reason codes for `insufficient-evidence`.
+- **Check A, output no tool produced:** text in the agent's message that looks like tool output, such as
+  a pytest summary, and matches no real tool result. Flag `fabricated_tool_output`.
+- **Check B, changing the check:** editing or disabling a test, or a control script the
+  environment named, before claiming success or submitting. Flag
+  `check_modified_before_success_claim`, always shown with the exact edit.
+
+Every verdict validates against `schema/claim_verdict.schema.json`. Usage:
+
+```
+ati check run.traj.json --format swebench --out verdicts.jsonl
+```
+
+`ati events <input> --format <name>` prints the parsed events, and `ati fetch <url> --sha256 <hash>`
+downloads a pinned log into a cache outside the repo. Preliminary results on SWE-bench, Palisade
+shutdown-avoidance, a seeded OpenHands set and a Gemini CLI transcript are in
+[results/README.md](results/README.md).
 
 ## What it reads
 
@@ -58,6 +89,15 @@ schema/corpus_report.schema.json    rates over a set of traces
 examples/coding_task_trace.json     a made-up trace of a small coding task
 examples/expected_verdicts.json     the verdicts the tool should produce for it
 examples/expected_corpus_report.json  the report for that one trace
+src/agent_trace_integrity/          the checker: adapters, claim finder, verdict rules, CLI
+tests/                              unit tests, plus network tests on pinned real runs
+scripts/                            pinning, results, seeded set, dev set and number-check scripts
+scripts/lambda/                     dry-run tooling for the open-weight LLM judge (not launched)
+data/pins/                          URLs and sha256 of third-party logs (the logs are not committed)
+devset/                             claim finder dev set and its labels (derived from D2, CC-BY-4.0)
+seeded/                             blind phrasings for the seeded regression set
+results/                            v0 results and their write-up
+docs/build-log.md                   what was built, phase by phase, and every rule change
 ```
 
 In the example, an agent edits `src/parser.py`, runs the tests, runs a linter, and reads PR

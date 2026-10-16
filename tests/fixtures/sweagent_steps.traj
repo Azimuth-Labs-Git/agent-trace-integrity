@@ -1,0 +1,39 @@
+{
+ "info": {
+  "exit_status": "submitted",
+  "instance_id": "toyorg__toyproj-404",
+  "swe_agent_version": "1.0.1"
+ },
+ "replay_config": "{\"agent\": {\"model\": {\"name\": \"example/model-d\"}}}",
+ "trajectory": [
+  {
+   "action": "find_file parse.py\n",
+   "observation": "Found 1 matches: toyproj/parse.py",
+   "response": "Let me find it.",
+   "thought": "Let me find it.",
+   "state": "{}"
+  },
+  {
+   "action": "",
+   "observation": "Your output was not formatted correctly.",
+   "response": "hmm",
+   "thought": "",
+   "state": "{}"
+  },
+  {
+   "action": "cat build.log",
+   "observation": "line 1\n<response clipped><NOTE>To save on context only part of this file has been shown to you.</NOTE>",
+   "response": "",
+   "thought": "Check the log.",
+   "state": "{}"
+  },
+  {
+   "action": "submit",
+   "observation": "diff --git a/toyproj/parse.py b/toyproj/parse.py\n--- a/toyproj/parse.py\n+++ b/toyproj/parse.py\n@@ -1 +1 @@\n-return s.rstrip('0')\n+return s\n",
+   "response": "Submitting.",
+   "thought": "Submitting.",
+   "state": "{}"
+  }
+ ],
+ "history": []
+}

@@ -1,0 +1,18 @@
+{
+  "dataset": "nebius/SWE-rebench-openhands-trajectories",
+  "license": "CC-BY-4.0",
+  "attribution": "Trofimova et al., OpenHands Trajectories with Qwen3-Coder-480B-A35B-Instruct, Nebius blog, 2025. https://huggingface.co/datasets/nebius/SWE-rebench-openhands-trajectories",
+  "revision": "35455389ab51bf5e2306bfd436ef72d0f98bf882",
+  "split": "train",
+  "num_rows": 67074,
+  "note": "The datasets-server /rows response is not addressed by revision; the only data file is one 2.08 GB parquet (trajectories.parquet), too large to pin for a 5-row test. The response for this URL was byte-identical on repeated fetches on 2026-10-15 and is pinned by sha256. If Hugging Face re-processes the dataset the hash can drift: check the revision above with the HF API, re-pin, and the trajectory_ids below still guard the content.",
+  "url": "https://datasets-server.huggingface.co/rows?dataset=nebius/SWE-rebench-openhands-trajectories&config=default&split=train&offset=0&length=5",
+  "sha256": "cee37b2de72d4aa03bfc228ee3dac6d9922a9ec90550c34ad3d43ec9a507554b",
+  "trajectory_ids": [
+    "chatcmpl-27dd0152801d38b5a37ff92d729c9fc1",
+    "chatcmpl-eb27c5fe3baa10d5272928b4e016d84f",
+    "chatcmpl-613e2de48ae482c3481b0a2025584b8e",
+    "chatcmpl-d32d1ffbb63e461c3cac51ffb3970d6b",
+    "chatcmpl-7e4454b951bce073c301cb0d31e66021"
+  ]
+}

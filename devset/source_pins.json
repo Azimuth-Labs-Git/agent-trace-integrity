@@ -1,0 +1,14 @@
+[
+ {
+  "url": "https://datasets-server.huggingface.co/rows?dataset=nebius/SWE-rebench-openhands-trajectories&config=default&split=train&offset=10000&length=20",
+  "sha256": "5d98eae6b75644a18cbaba6e155b3d32d644db12a7c4c3bcd538dfc72472923a"
+ },
+ {
+  "url": "https://datasets-server.huggingface.co/rows?dataset=nebius/SWE-rebench-openhands-trajectories&config=default&split=train&offset=10020&length=20",
+  "sha256": "965f51e3d7f1bc492241ff9e4d7b7dc0e11ee5d1a27b1c4a36e0b126070a7663"
+ },
+ {
+  "url": "https://datasets-server.huggingface.co/rows?dataset=nebius/SWE-rebench-openhands-trajectories&config=default&split=train&offset=10040&length=20",
+  "sha256": "7cf423fa75fae5bd2ef4811b8db50418c27635708d1568db546cf6dff6b7d43f"
+ }
+]

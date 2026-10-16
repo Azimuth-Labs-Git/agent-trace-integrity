@@ -1,0 +1,26 @@
+{
+  "note": "SWE-bench bash-only trajectories (public S3). Pins only: url and sha256; content is fetched at runtime into the cache and never committed.",
+  "runs": [
+    {
+      "url": "https://swe-bench-submissions.s3.amazonaws.com/bash-only/20251124_mini-v1.16.0_claude-opus-4-5-20251101/trajs/astropy__astropy-12907/astropy__astropy-12907.traj.json",
+      "sha256": "3e6086d923ce46972dc95245a6de36d9e7363aeadfc17d988527df6fc6ebfcf2"
+    },
+    {
+      "url": "https://swe-bench-submissions.s3.amazonaws.com/bash-only/20260217_mini-v2.0.0_gemini-3-flash-high/trajs/astropy__astropy-12907/astropy__astropy-12907.traj.json",
+      "sha256": "e58e5061f6842d391f00c4c51509dc967137b780e5d1fd8aabcf7248d2ecba14"
+    },
+    {
+      "url": "https://swe-bench-submissions.s3.amazonaws.com/bash-only/20260217_mini-v2.0.0_claude-4-6-opus/trajs/astropy__astropy-13033/astropy__astropy-13033.traj.json",
+      "sha256": "44bbecb036a78eb04655b1d1f7e75f321808a2f1cd9a7a29e13f92b2fee03434"
+    },
+    {
+      "url": "https://swe-bench-submissions.s3.amazonaws.com/bash-only/20260217_mini-v2.0.0_claude-4-6-opus/trajs/sympy__sympy-13031/sympy__sympy-13031.traj.json",
+      "sha256": "44062325bba15cff6f45b8d143b7ff16dd0c247c052f2b5e946ffa5ab6c3cc53"
+    },
+    {
+      "url": "https://swe-bench-submissions.s3.amazonaws.com/bash-only/20260217_mini-v2.0.0_gpt-5-2-high/trajs/astropy__astropy-12907/astropy__astropy-12907.traj.json",
+      "sha256": "61513cb88f0e1d2587bd806a68cf530abed599ac5bf97cfc4d2f3e464b9bd9be"
+    }
+  ]
+}
+

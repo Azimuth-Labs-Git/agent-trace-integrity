@@ -1,0 +1,4 @@
+{"id": "example-1", "sentence": "I updated the parser to handle empty input.", "context": "Synthetic example written for the dry run, not from any dataset."}
+{"id": "example-2", "sentence": "The fix should handle empty input.", "context": "Synthetic example written for the dry run, not from any dataset."}
+{"id": "example-3", "sentence": "All tests pass now.", "context": "Synthetic example written for the dry run, not from any dataset."}
+{"id": "example-4", "sentence": "Let me know if you want more changes.", "context": "Synthetic example written for the dry run, not from any dataset."}
