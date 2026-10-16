@@ -3,7 +3,6 @@ import hashlib
 import pytest
 
 from agent_trace_integrity import fetch as fetch_mod
-from agent_trace_integrity.cli import main
 
 
 def test_fetch_file_url_and_hash(tmp_path, monkeypatch):
@@ -18,8 +17,8 @@ def test_fetch_file_url_and_hash(tmp_path, monkeypatch):
         fetch_mod.fetch(src.as_uri(), "0" * 64)
 
 
-def test_cli_unknown_adapter_message(tmp_path):
-    f = tmp_path / "x"
-    f.write_text("")
-    with pytest.raises(NotImplementedError):
-        main(["check", str(f), "--format", "malt"])
+def test_unknown_format_is_rejected(tmp_path):
+    from agent_trace_integrity.adapters import load
+
+    with pytest.raises(ValueError):
+        load(tmp_path / "x", "nope")

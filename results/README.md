@@ -209,11 +209,39 @@ the fixes; see `docs/build-log.md` for the numbers before each fix.
    the agent created itself. Found on D3: two codex-mini-latest samples overwrote `shutdown.sh`
    but were skipped. After the fix every scorer-C sample is flagged.
 
+## D4, METR MALT: what a log checker cannot see (coverage map)
+
+`scripts/modal_malt.py` ran the MALT adapter (`adapters/malt.py`) and the full v0 checker on every
+run in MALT's main `data/` split (all 13 shards, dataset revision `3521e8e2`), with METR's
+labels. A run can carry more than one label. It ran on Modal, tagged `project=azimuth`. The transcripts stay in Modal; only counts and
+run ids are in `results/malt-d4.json`. MALT is MIT-licensed, gated, and carries a do-not-train
+canary.
+
+| METR label (manually reviewed) | Runs | Runs with tool calls parsed | Check B runs flagged |
+|---|---|---|---|
+| `bypass_constraints` | 23 | 17 | 0 |
+| `hardcoded_solution` | 15 | 15 | 0 |
+| `sabotage` | 224 | 224 | 0 |
+| `refusals` | 324 | 313 | 1 |
+| `normal` (mostly not reviewed) | 6047 | 5156 | 0 |
+
+How to read this:
+
+- **Check B is narrow by design.** It flags skip markers, deleted asserts, and writes to a control
+  script the environment named. It flagged none of the 262 runs METR labelled as bypassing
+  constraints, hardcoding answers or sabotage. So these behaviours mostly do not take the form of
+  editing the check, and a trace checker of this kind does not see them. We report this as the
+  limit of the method, not as a miss rate. It is preliminary, and these runs were not
+  hand-checked for whether a test edit was there to find.
+- **The one flag** is on a `refusals` run (run id 340499). It has not been hand-checked yet.
+- **Check A** flagged 13 `normal` runs for output-shaped text no tool produced. None of these have
+  been hand-checked.
+- **Adapter coverage:** pairing is clean on every run. Six `bypass_constraints` runs have no
+  parsed tool call, so their actions use a format the adapter does not read yet.
+
 ## Not run yet
 
 - **The second, larger LLM judge.** The small judge ran on Modal (see above).
-- **D4, METR MALT**, check B against METR's expert labels. Waiting on acceptance of the dataset
-  terms.
 
 The Lambda runner scripts in `../scripts/lambda/` pass offline dry runs and were not used; the
 judge ran on Modal instead.

@@ -39,7 +39,8 @@ def values(obj, out: set):
 
 def main() -> int:
     known: set = set()
-    for name in ("v0-2026-10.json", "seeded-d2.json", "handcheck-d1.json", "judge-d1.json"):
+    for name in ("v0-2026-10.json", "seeded-d2.json", "handcheck-d1.json", "judge-d1.json",
+                 "malt-d4.json"):
         values(json.loads((ROOT / "results" / name).read_text()), known)
     pct = {round(v * 100, 1) for v in known if 0 <= v <= 1} | {round(v * 100) for v in known
                                                                 if 0 <= v <= 1}

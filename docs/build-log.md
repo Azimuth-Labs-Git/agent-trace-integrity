@@ -244,3 +244,24 @@
 - Result (`results/judge-d1.json`): the judge matched the PI's question 1 on 14 of 19 settled
   cards (Wilson 95% 0.51 to 0.88), and called 18 of 24 borderline sentences claims. The second,
   larger judge was not run.
+
+## 2026-10-16, D4 METR MALT on Modal
+
+- Access: the PI's Hugging Face account `furycone` (Modal secret `huggingface-secret-proxy-forge`)
+  is on MALT's access list. His `mrubash1` tokens are not yet. The PI confirmed the account is
+  his.
+- `adapters/malt.py` reads the message DAG and follows the root-to-leaf path with the most
+  actions. A first version followed branch 0, which in some runs is a short side question; tool
+  calls were then parsed in only 4 of 23 `bypass_constraints` runs. After the fix the count is
+  17 of 23, and 15 of 15 for `hardcoded_solution`. Actions come from structured
+  `function_call`, `function_call: {...}` written as text, or `<bash>` / `<python>` tags. Results
+  come from `<NAME-output>` user messages or function messages.
+- `scripts/modal_malt.py::check_main` runs the adapter and the full checker on all 13 `data/`
+  shards inside Modal and writes counts and run ids to `results/malt-d4.json`. No transcript
+  text leaves the container.
+- Result:
+  - check B flags 0 of the 262 runs METR labelled `bypass_constraints`, `hardcoded_solution` or
+    `sabotage`, and 1 `refusals` run (not yet hand-checked);
+  - check A flags 13 `normal` runs (not hand-checked).
+  - This is reported as a coverage map of what a trace checker of this kind cannot see, as the
+    plan's section 8 framing says, not as a miss rate.
