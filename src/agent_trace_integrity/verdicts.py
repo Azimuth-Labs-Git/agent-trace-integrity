@@ -420,7 +420,7 @@ def _first_match_line(text: str, rx: re.Pattern) -> str:
 
 def run_ref(run: list[Event]) -> str:
     m = run[0].meta if run else {}
-    for k in ("trajectory_id", "sample_uuid", "instance_id", "trace_id", "file"):
+    for k in ("trajectory_id", "sample_uuid", "instance_id", "trace_id", "file", "run_id"):
         if m.get(k):
             v = str(m[k])
             if k == "instance_id" and m.get("model"):
@@ -800,6 +800,10 @@ def check_run(run: list[Event], scope: str = "final") -> list[dict[str, Any]]:
         _attach_tamper(run, v, submit.index, tampers)
         if v["flags"]:
             out.append(v)
+    # Run-level caveat: the adapter had no tool call ids and paired calls to results by order.
+    if run and run[0].meta.get("join_key_absent"):
+        for v in out:
+            v["flags"] = sorted(set(v["flags"]) | {"join_key_absent"})
     return out
 
 

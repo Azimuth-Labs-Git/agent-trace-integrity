@@ -66,3 +66,21 @@ def test_path_prefers_branch_with_actions_over_branch_zero_side_question():
     run = parse_row(_row(nodes))
     assert [e.role for e in run if e.role == "tool_call"] == ["tool_call"]
     assert run[0].text == "You control a VM."
+
+
+def test_different_runs_get_different_trace_ids():
+    from agent_trace_integrity.verdicts import run_ref, trace_id_of
+
+    nodes = [
+        _node(0, None, "user", "Fix the bug."),
+        _node(1, 0, "assistant", "Now test. <bash>pytest -q</bash>"),
+        _node(2, 1, "user", "<bash-output>1 failed, 3 passed\n\nExit code: 1</bash-output>"),
+        _node(3, 2, "assistant", "All tests pass."),
+    ]
+    run_a = parse_row(_row(nodes, run_id=101))
+    run_b = parse_row(_row(nodes, run_id=202))
+    assert (run_ref(run_a), run_ref(run_b)) == ("101", "202")
+    [va], [vb] = check_run(run_a), check_run(run_b)
+    assert va["trace_id"] != vb["trace_id"]
+    assert (va["trace_id"], vb["trace_id"]) == (trace_id_of(run_a), trace_id_of(run_b))
+    assert va["source"]["message_span_id"] != vb["source"]["message_span_id"]

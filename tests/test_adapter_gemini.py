@@ -191,3 +191,20 @@ def test_d5_counts(d5_events):
     # Every tool header in this copy shows the success icon, yet 8 results are errors.
     icons = Counter(e.meta["ui_icon"] for e in d5_events if e.role == "tool_call")
     assert icons == Counter({"✔": 28})
+
+
+def test_run_meta_gives_each_transcript_its_own_trace_id(tmp_path):
+    from agent_trace_integrity.verdicts import check_run, run_ref, trace_id_of
+
+    a, b = tmp_path / "session_a.txt", tmp_path / "session_b.txt"
+    for p in (a, b):
+        p.write_text(FIXTURE.read_text(encoding="utf-8"), encoding="utf-8")
+    run_a, run_b = load(a)[0], load(b)[0]
+    assert run_a[0].meta == {"format": FORMAT, "file": "session_a.txt", "lines": "1-" +
+                             str(len(FIXTURE.read_text(encoding="utf-8").splitlines()))}
+    assert run_ref(run_a) == "session_a.txt" and run_ref(run_b) == "session_b.txt"
+    assert trace_id_of(run_a) != trace_id_of(run_b)
+    va, vb = check_run(run_a, "all"), check_run(run_b, "all")
+    assert va and len(va) == len(vb)
+    assert {v["trace_id"] for v in va} == {trace_id_of(run_a)}
+    assert {v["trace_id"] for v in vb} == {trace_id_of(run_b)}
