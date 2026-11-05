@@ -420,7 +420,7 @@ def _first_match_line(text: str, rx: re.Pattern) -> str:
 
 def run_ref(run: list[Event]) -> str:
     m = run[0].meta if run else {}
-    for k in ("trajectory_id", "sample_uuid", "instance_id", "trace_id", "file"):
+    for k in ("trajectory_id", "sample_uuid", "instance_id", "trace_id", "file", "run_id"):
         if m.get(k):
             v = str(m[k])
             if k == "instance_id" and m.get("model"):

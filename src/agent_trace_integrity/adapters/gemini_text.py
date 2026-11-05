@@ -37,6 +37,9 @@ file, also when only a line range is loaded. Use ``line_span`` to read it back.
 
 Tool calls have no ids in this format, so ids are ``"{run}-call-{n}"`` and each result follows its
 call directly.
+
+The first event's ``meta`` holds ``format``, ``file`` (the file name) and ``lines`` (the range
+read), so each transcript gets its own ``run_ref`` and ``trace_id``.
 """
 
 from __future__ import annotations
@@ -313,7 +316,12 @@ def load_lines(
     end = len(all_lines) if end is None else min(end, len(all_lines))
     sel = [(k, all_lines[k - 1]) for k in range(max(start, 1), end + 1)]
     run = run or Path(path).stem[:12] or "run"
-    return [_parse_lines(sel, run)]
+    events = _parse_lines(sel, run)
+    if events:
+        # Run identity: the file name (not the path, so output does not depend on the machine).
+        events[0].meta.update({"format": FORMAT, "file": Path(path).name,
+                               "lines": f"{max(start, 1)}-{end}"})
+    return [events]
 
 
 def load(path: str | Path) -> list[list[Event]]:
