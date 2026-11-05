@@ -265,3 +265,27 @@
   - check A flags 13 `normal` runs (not hand-checked).
   - This is reported as a coverage map of what a trace checker of this kind cannot see, as the
     plan's section 8 framing says, not as a miss rate.
+
+## 2026-11-04, fixes from a line-by-line read
+
+Plan: [plan-2026-11-04-fixes.md](plan-2026-11-04-fixes.md).
+
+- **OTel, missing `gen_ai.tool.call.id`.** The first id-less `execute_tool` put `None` in the
+  set of seen calls, so every later id-less call was dropped and left an orphan result. Calls
+  with no id now get `"{trace_id}-call-{n}"`, id-less results pair to the oldest open call of the
+  same tool, and the run carries `join_key_absent`. `check_run` puts the schema flag
+  `join_key_absent` on every verdict of such a run; it was defined in the schema and never
+  emitted before. The otel run meta gains `format`.
+- **`run_ref` fallback.** MALT (`run_id`) and gemini-text (no run meta) runs all fell back to
+  `"run"` and shared one `trace_id`. `run_ref` now also reads `run_id`, and gemini-text records
+  `format`, `file` and `lines`. No `results/*.json` file holds trace ids, run refs or span ids, so
+  no published number changes.
+- **README.** "uncorroborated" now says no matching call before the claim; the open-weight model
+  for one sub-type is planned, behind a flag, not in v0; relayed claims and the example's lint and
+  relayed CI verdicts are marked as not in v0.
+- **CI installed** at `.github/workflows/ci.yml` (Python 3.11 and 3.12, ruff, pytest), required to
+  pass on `main`. New offline tests check that `ati check` and `ati events` on the example give
+  identical bytes across two runs.
+- Validation: `ati check` output on `examples/coding_task_trace.json` is byte-identical before and
+  after (both scopes); `ati events` differs only by `"format": "otel"` on event 0. 122 unit tests
+  pass (112 before), 10 network tests skipped; ruff clean.
