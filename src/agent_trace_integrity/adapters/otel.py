@@ -8,13 +8,18 @@ trace id:
 - each ``execute_tool`` span gives the tool_result, paired by ``gen_ai.tool.call.id``. If the chat
   span did not log its output (the attribute is Opt-In), the call event is built from the
   ``execute_tool`` span's own name and arguments.
+- ``gen_ai.tool.call.id`` is optional. A call part with no id gets ``"{trace_id}-call-{n}"``
+  (n counts the run's calls from 1). An ``execute_tool`` span with no id is paired by order: it
+  takes the oldest open call with the same tool name, or, if there is none, its call event is
+  built from the span with a generated id. Such a run has ``meta["join_key_absent"] = True`` on
+  its first event, and every verdict for it carries the ``join_key_absent`` flag.
 
 ``gen_ai.tool.call.result`` is also Opt-In; when it is missing, ``tool_result`` is ``None`` and
 ``status`` is ``unknown`` (or ``error`` if the span status code is ERROR). An ``exit_code`` key in
 a JSON result sets ``exit_code`` and ``status``.
 
 Each event's ``source_ref`` is ``span:<spanId>``; ``meta`` holds ``trace_id``, ``span_id``,
-``part_index`` and, on the first event, the agent span id and model.
+``part_index`` and, on the first event, ``format``, the agent span id and model.
 """
 
 from __future__ import annotations
@@ -104,7 +109,10 @@ def load(path: Path) -> list[list[Event]]:
         spans.sort(key=lambda s: int(s.get("startTimeUnixNano", 0)))
         events: list[Event] = []
         seen_calls: set[str] = set()
-        first_meta: dict[str, Any] = {"trace_id": tid}
+        open_calls: list[Event] = []  # calls from chat spans still waiting for a result
+        n_calls = 0
+        join_key_absent = False
+        first_meta: dict[str, Any] = {"trace_id": tid, "format": FORMAT}
         for s in spans:
             a = _attrs(s)
             op = a.get("gen_ai.operation.name")
@@ -114,17 +122,39 @@ def load(path: Path) -> list[list[Event]]:
                 events += _messages_to_events(_json(a.get("gen_ai.input.messages")), s, tid)
             elif op == "chat":
                 new = _messages_to_events(_json(a.get("gen_ai.output.messages")), s, tid)
-                seen_calls |= {e.tool_call_id for e in new if e.role == "tool_call"}
+                for e in new:
+                    if e.role == "tool_call":
+                        n_calls += 1
+                        if not e.tool_call_id:
+                            e.tool_call_id = f"{tid}-call-{n_calls}"
+                            join_key_absent = True
+                        seen_calls.add(e.tool_call_id)
+                        open_calls.append(e)
                 events += new
             elif op == "execute_tool":
                 cid = a.get("gen_ai.tool.call.id")
+                name = a.get("gen_ai.tool.name")
+                if not cid:
+                    # No join key: pair with the oldest open call of the same tool, by order.
+                    join_key_absent = True
+                    match = next((c for c in open_calls if c.tool_name is None or name is None
+                                  or c.tool_name == name), None)
+                    if match is not None:
+                        cid = match.tool_call_id
                 if cid not in seen_calls:
-                    events.append(Event(0, "tool_call", tool_name=a.get("gen_ai.tool.name"),
+                    n_calls += 1
+                    cid = cid or f"{tid}-call-{n_calls}"
+                    events.append(Event(0, "tool_call", tool_name=name,
                                         tool_args=_json(a.get("gen_ai.tool.call.arguments")),
                                         tool_call_id=cid, source_ref=f"span:{s['spanId']}",
                                         meta={"trace_id": tid, "span_id": s["spanId"]}))
                     seen_calls.add(cid)
-                events.append(_result_event(s, a, tid))
+                open_calls = [c for c in open_calls if c.tool_call_id != cid]
+                result = _result_event(s, a, tid)
+                result.tool_call_id = cid
+                events.append(result)
+        if join_key_absent:
+            first_meta["join_key_absent"] = True
         if events:
             events[0].meta.update(first_meta)
         runs.append(reindex(events))
