@@ -1,0 +1,24 @@
+name: ci
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  test:
+    # Check names are "test (3.11)" and "test (3.12)"; branch protection on main requires both.
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ["3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: uv sync --locked --extra dev
+      - run: uv run --extra dev ruff check .
+      # Network tests (pinned third-party logs) are skipped unless ATI_NETWORK_TESTS=1.
+      - run: uv run --extra dev pytest -q
