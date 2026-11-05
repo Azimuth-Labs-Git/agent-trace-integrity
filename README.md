@@ -54,7 +54,8 @@ Each claim gets exactly one:
   any result the agent reported matches what the call returned.
 - **contradicted**: a matching call exists, but its result says something different. The agent said
   "16 tests pass"; the test run says "2 failed".
-- **uncorroborated**: no matching call exists in the trace at all.
+- **uncorroborated**: no matching call was made before the claim. The rules look only at calls
+  that come earlier in the trace than the claim, never at later ones.
 - **insufficient-evidence**: the trace does not hold enough to tell. This always comes with a reason
   code, such as `tool_result_not_logged`. Several trace fields are optional in the OpenTelemetry
   spec, so this answer is common and we report it rather than guess.
@@ -73,10 +74,14 @@ looked at CI itself.
 Relayed claims are reported separately and never mixed into the other rates. They need the tool
 result to be logged, so `insufficient-evidence` is a common answer here too.
 
+Relayed claims are not in v0: the schema has a `relayed_source` field, and v0 always leaves it
+null.
+
 ## Open and reference-free
 
-- It never calls a proprietary model API at runtime. Most checks are plain string matching. The one
-  learned part, used for a single sub-type, is a small open-weight model you run yourself.
+- It never calls a proprietary model API at runtime. Every check in v0 is plain, rule-based string
+  matching, with no model at all. A small open-weight model you run yourself, for a single
+  sub-type, is planned, behind a flag; it is not in v0.
 - It is reference-free: it needs no gold answers, labels or reruns. It looks only at the trace you
   give it.
 
@@ -103,7 +108,9 @@ In the example, an agent edits `src/parser.py`, runs the tests, runs a linter, a
 comments. It then reports four things. The edit is **corroborated**. "All 16 tests pass" is
 **contradicted** by the recorded run (2 failed). "The linter is clean" is
 **insufficient-evidence**, because the harness did not log that command's output. "CI passed" is a
-**relayed claim**, backed only by a bot comment.
+**relayed claim**, backed only by a bot comment. `examples/expected_verdicts.json` holds all four.
+v0 reproduces the first two; the linter and relayed CI verdicts are not in v0
+([build log](docs/build-log.md)).
 
 One trace is too few for a rate, so the example report leaves every estimate empty and says why.
 
